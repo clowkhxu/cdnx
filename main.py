@@ -3,13 +3,13 @@ import urllib.parse
 
 # --- CẤU HÌNH ---
 # Script tự tìm folder Season1 dựa trên folder chứa phim hiện tại của bạn
-BASE_DIR = os.path.join(os.getcwd(), "Phim TQ", "Nguyệt Lân Ỷ Kỷ - Veil of Shadows (2026)", "Season1")
+BASE_DIR = os.path.join(os.getcwd(), "Phim TQ", "Tôi Ở Đại Học Tu Sửa Văn Vật - Glaze of Love (2026)", "Season1")
 
 # URL gốc của Github
 GITHUB_BASE = "https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/"
 
 # Đường dẫn tương đối trong Repo (Hãy sửa tên phim ở đây nếu bạn đổi sang phim khác)
-REPO_SUB_PATH = "Phim TQ/Nguyệt Lân Ỷ Kỷ - Veil of Shadows (2026)/Season1/"
+REPO_SUB_PATH = "Phim TQ/Tôi Ở Đại Học Tu Sửa Văn Vật - Glaze of Love (2026)/Season1/"
 
 LANG_MAP = {
     "vie": {"name": "Vietnamese", "lang": "vi", "default": "YES"},
