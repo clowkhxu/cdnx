@@ -5,9 +5,9 @@ import urllib.parse
 
 # --- CẤU HÌNH ---
 SOURCE_DIR = os.path.join(os.getcwd(), "soucre")
-BASE_DIR = os.path.join(os.getcwd(), "Phim TQ", "Xin Chào 1983 - Dream of Golden (2026)", "Season1")
+BASE_DIR = os.path.join(os.getcwd(), "Phim HQ", "Ánh Sáng Của Đôi Ta - Still Shining (2026)", "Season1")
 GITHUB_BASE = "https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/"
-REPO_SUB_PATH = "Phim TQ/Xin Chào 1983 - Dream of Golden (2026)/Season1/"
+REPO_SUB_PATH = "Phim HQ/Ánh Sáng Của Đôi Ta - Still Shining (2026)/Season1/"
 
 LANG_MAP = {
     "vie": {"name": "Vietnamese", "lang": "vi", "default": "YES"},
