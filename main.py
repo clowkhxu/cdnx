@@ -5,9 +5,9 @@ import urllib.parse
 
 # --- CẤU HÌNH ---
 SOURCE_DIR = os.path.join(os.getcwd(), "soucre")
-BASE_DIR = os.path.join(os.getcwd(), "Phim TQ", "Giang Hồ Dạ Vũ Thập Niên Đăng - Generation to Generation (2026)", "Season1")
+BASE_DIR = os.path.join(os.getcwd(), "Phim TQ", "Xin Chào 1983 - Dream of Golden (2026)", "Season1")
 GITHUB_BASE = "https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/"
-REPO_SUB_PATH = "Phim TQ/Giang Hồ Dạ Vũ Thập Niên Đăng - Generation to Generation (2026)/Season1/"
+REPO_SUB_PATH = "Phim TQ/Xin Chào 1983 - Dream of Golden (2026)/Season1/"
 
 LANG_MAP = {
     "vie": {"name": "Vietnamese", "lang": "vi", "default": "YES"},
@@ -29,39 +29,38 @@ LANG_MAP = {
 }
 
 def organize_files_from_source():
-    print(f"\n--- BẮT ĐẦU PHÂN LOẠI FILE TỪ: {SOURCE_DIR} ---")
+    print(f"\n🚀 --- BẮT ĐẦU PHÂN LOẠI FILE TỪ: {SOURCE_DIR} ---")
     if not os.path.exists(SOURCE_DIR):
-        print(f"[!] Bỏ qua: Không tìm thấy thư mục {SOURCE_DIR}")
+        print(f"⚠️  Bỏ qua: Không tìm thấy thư mục nguồn '{SOURCE_DIR}'")
         return
 
     if not os.path.exists(BASE_DIR):
         os.makedirs(BASE_DIR)
+        print(f"📂 Đã tạo thư mục gốc: {BASE_DIR}")
 
     file_count = 0
-    # os.walk quét đệ quy toàn bộ thư mục và thư mục con
     for root, dirs, files in os.walk(SOURCE_DIR):
         for filename in files:
-            # Chỉ lấy các file bắt đầu bằng ep + số (vd: ep1.m3u8, ep3_vie_1.vtt)
             match = re.match(r'^(ep)(\d+)', filename, re.IGNORECASE)
             if not match:
                 continue
             
             file_count += 1
-            ep_prefix = match.group(0).lower() # chữ "ep1"
-            ep_num = match.group(2) # số "1"
+            ep_num = match.group(2)
+            ep_prefix = match.group(1).lower() + ep_num
             
-            # Tạo folder đích: Ep1, Ep2...
             target_ep_folder = f"Ep{ep_num}"
             target_ep_path = os.path.join(BASE_DIR, target_ep_folder)
 
+            # Log khi tạo folder Ep mới
             if not os.path.exists(target_ep_path):
                 os.makedirs(target_ep_path)
+                print(f"🆕 [Folder] Đã tạo thư mục mới: {target_ep_folder}")
 
             src_full_path = os.path.join(root, filename)
             dest_name = filename
             f_lower = filename.lower()
 
-            # Đổi tên file m3u8
             if f_lower == f"{ep_prefix}.m3u8":
                 dest_name = "index.m3u8"
             elif f_lower == f"{ep_prefix}_sv2.m3u8":
@@ -70,23 +69,23 @@ def organize_files_from_source():
             dest_full_path = os.path.join(target_ep_path, dest_name)
 
             if os.path.exists(dest_full_path):
-                print(f"[~] Đã tồn tại: {target_ep_folder}/{dest_name}")
+                print(f"🔍 [Skip] Đã có sẵn: {target_ep_folder}/{dest_name} (Giữ nguyên)")
             else:
-                shutil.copy2(src_full_path, dest_full_path) # Dùng copy thay vì move
-                print(f"[+] Đã copy: {filename} -> {target_ep_folder}/{dest_name}")
+                shutil.copy2(src_full_path, dest_full_path)
+                print(f"✅ [Copy] Thành công: {filename} -> {target_ep_folder}/{dest_name}")
 
     if file_count == 0:
-        print("[!] Không tìm thấy bất kỳ file nào có tên bắt đầu bằng 'ep' bên trong soucre.")
+        print("⚠️  Không tìm thấy file hợp lệ (ep*) để xử lý.")
 
 def update_playlist_files():
-    print(f"\n--- BẮT ĐẦU CẬP NHẬT M3U8 TẠI: {BASE_DIR} ---")
+    print(f"\n🛠️  --- CẬP NHẬT NỘI DUNG PLAYLIST TẠI: {BASE_DIR} ---")
     if not os.path.exists(BASE_DIR):
         return
 
     subfolders = sorted([d for d in os.listdir(BASE_DIR) if os.path.isdir(os.path.join(BASE_DIR, d)) and d.lower().startswith('ep')])
     
     if not subfolders:
-        print("[!] Không tìm thấy thư mục Ep nào để cập nhật.")
+        print("⚠️  Không thấy thư mục Ep nào để cập nhật nội dung.")
         return
 
     for ep_folder in subfolders:
@@ -94,6 +93,7 @@ def update_playlist_files():
         vtt_files = sorted([f for f in os.listdir(ep_path) if f.endswith('.vtt')])
         
         if not vtt_files:
+            print(f"ℹ️  [Info] {ep_folder}: Không có file phụ đề .vtt, bỏ qua cập nhật M3U8.")
             continue
             
         new_media_lines = []
@@ -111,6 +111,7 @@ def update_playlist_files():
                     f'DEFAULT={info["default"]},AUTOSELECT=YES,URI="{encoded_uri}"')
             new_media_lines.append(line)
 
+        updated_any = False
         for filename in ["index.m3u8", "index_sv2.m3u8"]:
             file_path = os.path.join(ep_path, filename)
             if not os.path.exists(file_path):
@@ -120,6 +121,7 @@ def update_playlist_files():
                 old_lines = f.readlines()
 
             clean_lines = [line.strip() for line in old_lines if "#EXT-X-MEDIA:TYPE=SUBTITLES" not in line]
+            
             insert_idx = 1
             for i, line in enumerate(clean_lines):
                 if line.startswith("#EXT-X-VERSION"):
@@ -129,12 +131,23 @@ def update_playlist_files():
                     insert_idx = i + 1
 
             final_content = clean_lines[:insert_idx] + new_media_lines + clean_lines[insert_idx:]
-            with open(file_path, "w", encoding="utf-8") as f:
-                f.write("\n".join(final_content) + "\n")
-            
-        print(f"[+] Đã làm mới phụ đề cho: {ep_folder}")
+            new_content_str = "\n".join(final_content) + "\n"
+
+            # Kiểm tra xem nội dung có thực sự thay đổi không để log
+            with open(file_path, "r", encoding="utf-8") as f:
+                current_content = f.read()
+
+            if new_content_str == current_content:
+                print(f"🆗 [Steady] {ep_folder}/{filename}: Cấu trúc phụ đề đã chuẩn, không cần ghi đè.")
+            else:
+                with open(file_path, "w", encoding="utf-8") as f:
+                    f.write(new_content_str)
+                updated_any = True
+
+        if updated_any:
+            print(f"📝 [Update] Đã làm mới link phụ đề cho: {ep_folder}")
 
 if __name__ == "__main__":
     organize_files_from_source()
     update_playlist_files()
-    print("\n--- HOÀN TẤT ---")
+    print("\n✨ --- TẤT CẢ CÔNG VIỆC ĐÃ HOÀN TẤT ---")
