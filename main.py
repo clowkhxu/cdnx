@@ -5,9 +5,9 @@ import urllib.parse
 
 # --- CẤU HÌNH ---
 SOURCE_DIR = os.path.join(os.getcwd(), "soucre")
-BASE_DIR = os.path.join(os.getcwd(), "Phim NB", "Chú Thuật Hồi Chiến - Jujutsu Kaisen", "Season3")
+BASE_DIR = os.path.join(os.getcwd(), "Phim TQ", "Sở Kiều Truyện - Rebirth", "Season2")
 GITHUB_BASE = "https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/"
-REPO_SUB_PATH = "Phim NB/Chú Thuật Hồi Chiến - Jujutsu Kaisen/Season3/"
+REPO_SUB_PATH = "Phim TQ/Sở Kiều Truyện - Rebirth/Season2/"
 
 LANG_MAP = {
     "vie": {"name": "Vietnamese", "lang": "vi", "default": "YES"},
