@@ -5,9 +5,9 @@ import urllib.parse
 
 # --- CẤU HÌNH ---
 SOURCE_DIR = os.path.join(os.getcwd(), "soucre")
-BASE_DIR = os.path.join(os.getcwd(), "Phim TQ", "Sở Kiều Truyện - Rebirth", "Season2")
+BASE_DIR = os.path.join(os.getcwd(), "Phim TQ", "Bạch Nhật Đề Đăng - Love Beyond The Grave (2026)", "Season1")
 GITHUB_BASE = "https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/"
-REPO_SUB_PATH = "Phim TQ/Sở Kiều Truyện - Rebirth/Season2/"
+REPO_SUB_PATH = "Phim TQ/Bạch Nhật Đề Đăng - Love Beyond The Grave (2026)/Season1/"
 
 LANG_MAP = {
     "vie": {"name": "Vietnamese", "lang": "vi", "default": "YES"},
