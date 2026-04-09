@@ -4,9 +4,9 @@ import urllib.parse
 
 # --- CẤU HÌNH ---
 SOURCE_DIR = os.path.join(os.getcwd(), "soucre")
-BASE_DIR = os.path.join(os.getcwd(), "Phim ÂM", "Bóng ma Anh Quốc - Peaky Blinders", "Movie")
+BASE_DIR = os.path.join(os.getcwd(), "Phim NB", "Chainsaw Man", "Movie1")
 GITHUB_BASE = "https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/"
-REPO_SUB_PATH = "Phim ÂM/Bóng ma Anh Quốc - Peaky Blinders/Movie/"
+REPO_SUB_PATH = "Phim NB/Chainsaw Man/Movie1/"
 
 LANG_MAP = {
     "vie": {"name": "Vietnamese", "lang": "vi", "default": "YES"},
