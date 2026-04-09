@@ -1,13 +1,12 @@
 import os
 import shutil
-import re
 import urllib.parse
 
 # --- CẤU HÌNH ---
 SOURCE_DIR = os.path.join(os.getcwd(), "soucre")
-BASE_DIR = os.path.join(os.getcwd(), "Phim TQ", "Bạch Nhật Đề Đăng - Love Beyond The Grave (2026)", "Season1")
+BASE_DIR = os.path.join(os.getcwd(), "Phim ÂM", "Bóng ma Anh Quốc - Peaky Blinders", "Movie")
 GITHUB_BASE = "https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/"
-REPO_SUB_PATH = "Phim TQ/Bạch Nhật Đề Đăng - Love Beyond The Grave (2026)/Season1/"
+REPO_SUB_PATH = "Phim ÂM/Bóng ma Anh Quốc - Peaky Blinders/Movie/"
 
 LANG_MAP = {
     "vie": {"name": "Vietnamese", "lang": "vi", "default": "YES"},
@@ -26,128 +25,90 @@ LANG_MAP = {
     "rus": {"name": "Russian", "lang": "ru", "default": "NO"},
     "spa": {"name": "Spanish", "lang": "es", "default": "NO"},
     "swa": {"name": "Swahili", "lang": "sw", "default": "NO"},
+    "ukr": {"name": "Ukrainian", "lang": "uk", "default": "NO"},
+    "tur": {"name": "Turkish", "lang": "tr", "default": "NO"},
+    "rum": {"name": "Romanian", "lang": "ro", "default": "NO"},
+    "nob": {"name": "Norwegian", "lang": "no", "default": "NO"},
+    "swe": {"name": "Swedish", "lang": "sv", "default": "NO"},
 }
 
 def organize_files_from_source():
-    print(f"\n🚀 --- BẮT ĐẦU PHÂN LOẠI FILE TỪ: {SOURCE_DIR} ---")
+    print(f"\n🚀 --- BẮT ĐẦU CHUYỂN FILE ---")
     if not os.path.exists(SOURCE_DIR):
-        print(f"⚠️  Bỏ qua: Không tìm thấy thư mục nguồn '{SOURCE_DIR}'")
+        print(f"⚠️ Không tìm thấy nguồn: {SOURCE_DIR}")
         return
 
     if not os.path.exists(BASE_DIR):
         os.makedirs(BASE_DIR)
-        print(f"📂 Đã tạo thư mục gốc: {BASE_DIR}")
 
-    file_count = 0
     for root, dirs, files in os.walk(SOURCE_DIR):
         for filename in files:
-            match = re.match(r'^(ep)(\d+)', filename, re.IGNORECASE)
-            if not match:
-                continue
-            
-            file_count += 1
-            ep_num = match.group(2)
-            ep_prefix = match.group(1).lower() + ep_num
-            
-            target_ep_folder = f"Ep{ep_num}"
-            target_ep_path = os.path.join(BASE_DIR, target_ep_folder)
-
-            # Log khi tạo folder Ep mới
-            if not os.path.exists(target_ep_path):
-                os.makedirs(target_ep_path)
-                print(f"🆕 [Folder] Đã tạo thư mục mới: {target_ep_folder}")
-
             src_full_path = os.path.join(root, filename)
             dest_name = filename
             f_lower = filename.lower()
 
-            if f_lower == f"{ep_prefix}.m3u8":
-                dest_name = "index.m3u8"
-            elif f_lower == f"{ep_prefix}_sv2.m3u8":
-                dest_name = "index_sv2.m3u8"
+            # Đổi tên m3u8
+            if f_lower.endswith(".m3u8"):
+                dest_name = "index_sv2.m3u8" if "sv2" in f_lower else "index.m3u8"
 
-            dest_full_path = os.path.join(target_ep_path, dest_name)
+            dest_full_path = os.path.join(BASE_DIR, dest_name)
 
-            if os.path.exists(dest_full_path):
-                print(f"🔍 [Skip] Đã có sẵn: {target_ep_folder}/{dest_name} (Giữ nguyên)")
-            else:
+            if not os.path.exists(dest_full_path):
                 shutil.copy2(src_full_path, dest_full_path)
-                print(f"✅ [Copy] Thành công: {filename} -> {target_ep_folder}/{dest_name}")
-
-    if file_count == 0:
-        print("⚠️  Không tìm thấy file hợp lệ (ep*) để xử lý.")
+                print(f"✅ [Copy] {filename} -> {os.path.basename(BASE_DIR)}/{dest_name}")
 
 def update_playlist_files():
-    print(f"\n🛠️  --- CẬP NHẬT NỘI DUNG PLAYLIST TẠI: {BASE_DIR} ---")
+    print(f"\n🛠️  --- CẬP NHẬT M3U8 ---")
+    
     if not os.path.exists(BASE_DIR):
         return
 
-    subfolders = sorted([d for d in os.listdir(BASE_DIR) if os.path.isdir(os.path.join(BASE_DIR, d)) and d.lower().startswith('ep')])
-    
-    if not subfolders:
-        print("⚠️  Không thấy thư mục Ep nào để cập nhật nội dung.")
+    vtt_files = sorted([f for f in os.listdir(BASE_DIR) if f.endswith('.vtt')])
+    if not vtt_files:
+        print("⚠️ Không có file .vtt nào để cập nhật.")
         return
 
-    for ep_folder in subfolders:
-        ep_path = os.path.join(BASE_DIR, ep_folder)
-        vtt_files = sorted([f for f in os.listdir(ep_path) if f.endswith('.vtt')])
+    new_media_lines = []
+    for vtt in vtt_files:
+        code = "unknown"
+        for key in LANG_MAP:
+            if f"_{key}_" in f"_{vtt.lower()}_" or vtt.lower().startswith(f"{key}_"):
+                code = key
+                break
         
-        if not vtt_files:
-            print(f"ℹ️  [Info] {ep_folder}: Không có file phụ đề .vtt, bỏ qua cập nhật M3U8.")
+        info = LANG_MAP.get(code, {"name": code.upper(), "lang": code, "default": "NO"})
+        
+        # Tạo link trực tiếp tới repo
+        full_repo_path = f"{REPO_SUB_PATH}{vtt}".replace("//", "/")
+        encoded_uri = GITHUB_BASE + urllib.parse.quote(full_repo_path)
+        
+        line = (f'#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",'
+                f'NAME="{info["name"]}",LANGUAGE="{info["lang"]}",'
+                f'DEFAULT={info["default"]},AUTOSELECT=YES,URI="{encoded_uri}"')
+        new_media_lines.append(line)
+
+    # Chèn vào các file index.m3u8
+    for filename in ["index.m3u8", "index_sv2.m3u8"]:
+        file_path = os.path.join(BASE_DIR, filename)
+        if not os.path.exists(file_path):
             continue
-            
-        new_media_lines = []
-        for vtt in vtt_files:
-            parts = vtt.split('_')
-            if len(parts) < 2: continue
-            code = parts[1]
-            info = LANG_MAP.get(code, {"name": code.upper(), "lang": code, "default": "NO"})
-            
-            full_repo_path = f"{REPO_SUB_PATH}{ep_folder}/{vtt}"
-            encoded_uri = GITHUB_BASE + urllib.parse.quote(full_repo_path)
-            
-            line = (f'#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",'
-                    f'NAME="{info["name"]}",LANGUAGE="{info["lang"]}",'
-                    f'DEFAULT={info["default"]},AUTOSELECT=YES,URI="{encoded_uri}"')
-            new_media_lines.append(line)
 
-        updated_any = False
-        for filename in ["index.m3u8", "index_sv2.m3u8"]:
-            file_path = os.path.join(ep_path, filename)
-            if not os.path.exists(file_path):
-                continue
+        with open(file_path, "r", encoding="utf-8") as f:
+            content = f.readlines()
 
-            with open(file_path, "r", encoding="utf-8") as f:
-                old_lines = f.readlines()
+        clean_lines = [l.strip() for l in content if "#EXT-X-MEDIA:TYPE=SUBTITLES" not in l]
+        insert_idx = 1
+        for i, line in enumerate(clean_lines):
+            if line.startswith(("#EXT-X-VERSION", "#EXTM3U")):
+                insert_idx = i + 1
 
-            clean_lines = [line.strip() for line in old_lines if "#EXT-X-MEDIA:TYPE=SUBTITLES" not in line]
-            
-            insert_idx = 1
-            for i, line in enumerate(clean_lines):
-                if line.startswith("#EXT-X-VERSION"):
-                    insert_idx = i + 1
-                    break
-                elif line.startswith("#EXTM3U") and insert_idx == 1:
-                    insert_idx = i + 1
-
-            final_content = clean_lines[:insert_idx] + new_media_lines + clean_lines[insert_idx:]
-            new_content_str = "\n".join(final_content) + "\n"
-
-            # Kiểm tra xem nội dung có thực sự thay đổi không để log
-            with open(file_path, "r", encoding="utf-8") as f:
-                current_content = f.read()
-
-            if new_content_str == current_content:
-                print(f"🆗 [Steady] {ep_folder}/{filename}: Cấu trúc phụ đề đã chuẩn, không cần ghi đè.")
-            else:
-                with open(file_path, "w", encoding="utf-8") as f:
-                    f.write(new_content_str)
-                updated_any = True
-
-        if updated_any:
-            print(f"📝 [Update] Đã làm mới link phụ đề cho: {ep_folder}")
+        final_str = "\n".join(clean_lines[:insert_idx] + new_media_lines + clean_lines[insert_idx:]) + "\n"
+        
+        with open(file_path, "w", encoding="utf-8") as f:
+            f.write(final_str)
+        print(f"📝 [Update] {os.path.basename(BASE_DIR)}/{filename}")
 
 if __name__ == "__main__":
     organize_files_from_source()
     update_playlist_files()
-    print("\n✨ --- TẤT CẢ CÔNG VIỆC ĐÃ HOÀN TẤT ---")
+    print("\n✨ --- HOÀN TẤT ---")
