@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Subtitle Splitter (GIỮ NGUYÊN 100%)</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    textarea { width: 100%; height: 220px; margin-top: 10px; }
+    .chunk { margin-bottom: 25px; }
+    button { margin-top: 5px; }
+  </style>
+</head>
+<body>
+
+<h2>✂️ Chia subtitle (không đổi timeline)</h2>
+
+<input type="file" id="fileInput" accept=".srt,.txt,.ass,.vtt"><br><br>
+
+<label>Số block mỗi phần:</label> <input type="number" id="blocksPerChunk" value="20"><br><br>
+
+<button onclick="splitFile()">Chia file</button>
+
+<div id="output"></div>
+
+<script>
+function copyText(textarea) {
+  textarea.select();
+  document.execCommand("copy");
+  alert("Đã copy!");
+}
+
+function splitFile() {
+  const fileInput = document.getElementById('fileInput');
+  const blocksPerChunk = parseInt(document.getElementById('blocksPerChunk').value);
+  const output = document.getElementById('output');
+  output.innerHTML = "";
+
+  if (!fileInput.files.length) {
+    alert("Chọn file trước!");
+    return;
+  }
+
+  const file = fileInput.files[0];
+  const reader = new FileReader();
+
+  reader.onload = function(e) {
+    let originalText = e.target.result;
+
+    // Chuẩn hóa xuống dòng nhưng KHÔNG thay đổi nội dung
+    let normalized = originalText.replace(/\r\n/g, "\n");
+
+    // Tách block bằng dòng trống
+    let blocks = normalized.split(/\n{2,}/);
+
+    let part = 1;
+
+    for (let i = 0; i < blocks.length; i += blocksPerChunk) {
+      let chunkBlocks = blocks.slice(i, i + blocksPerChunk);
+
+      // GHÉP LẠI y như cũ (1 dòng trống giữa block)
+      let chunkText = chunkBlocks.join("\n\n");
+
+      let div = document.createElement("div");
+      div.className = "chunk";
+
+      let title = document.createElement("h3");
+      title.textContent = "Phần " + part;
+
+      let textarea = document.createElement("textarea");
+      textarea.value = chunkText;
+
+      let btn = document.createElement("button");
+      btn.textContent = "Copy";
+      btn.onclick = () => copyText(textarea);
+
+      div.appendChild(title);
+      div.appendChild(textarea);
+      div.appendChild(btn);
+
+      output.appendChild(div);
+      part++;
+    }
+  };
+
+  reader.readAsText(file);
+}
+</script>
+
+</body>
+</html>
