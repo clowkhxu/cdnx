@@ -3,6 +3,7 @@ import shutil
 import urllib.parse
 import tkinter as tk
 from tkinter import filedialog, simpledialog
+import re  # Thêm thư viện này để tách chuỗi URI dễ dàng hơn
 
 # --- CẤU HÌNH ---
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -74,8 +75,10 @@ def organize_files_from_source(base_dir):
             dest_name = filename
             f_lower = filename.lower()
 
+            # Sửa lỗi logic cũ: Chỉ đổi tên nếu file đó là file master, giữ nguyên video/audio
             if f_lower.endswith(".m3u8"):
-                dest_name = "index_sv2.m3u8" if "sv2" in f_lower else "index.m3u8"
+                if "master" in f_lower:
+                    dest_name = "index_sv2.m3u8" if "sv2" in f_lower else "index.m3u8"
 
             dest_full_path = os.path.join(current_dest_dir, dest_name)
 
@@ -130,14 +133,49 @@ def update_playlist_files(base_dir, repo_sub_path, intro_end):
             # Lọc bỏ các dòng Subtitle và Intro cũ để không bị lặp khi chạy lại
             clean_lines = [l.strip() for l in content if "#EXT-X-MEDIA:TYPE=SUBTITLES" not in l and "#EXT-X-INTRO" not in l]
             
+            # --- BẮT ĐẦU LOGIC MỚI: Xử lý thêm link cho Audio và Video ---
+            processed_lines = []
+            is_video_line = False
+
+            for line in clean_lines:
+                if not line:
+                    continue
+                
+                # 1. Cập nhật link cho các dòng AUDIO hiện có
+                if line.startswith("#EXT-X-MEDIA:TYPE=AUDIO"):
+                    match = re.search(r'URI="([^"]+)"', line)
+                    if match:
+                        old_uri = match.group(1)
+                        full_repo_path = f"{current_repo_path}{old_uri}".replace("//", "/")
+                        encoded_uri = GITHUB_BASE + urllib.parse.quote(full_repo_path)
+                        line = line.replace(f'URI="{old_uri}"', f'URI="{encoded_uri}"')
+                
+                # 2. Xử lý dòng STREAM-INF để chuẩn bị cho Video
+                elif line.startswith("#EXT-X-STREAM-INF"):
+                    # Thêm khai báo SUBTITLES="subs" vào đuôi nếu chưa có
+                    if 'SUBTITLES="subs"' not in line:
+                        line += ',SUBTITLES="subs"'
+                    is_video_line = True
+                    processed_lines.append(line)
+                    continue
+
+                # 3. Cập nhật link cho dòng Video (ngay sát dưới STREAM-INF)
+                if is_video_line and not line.startswith("#"):
+                    full_repo_path = f"{current_repo_path}{line}".replace("//", "/")
+                    line = GITHUB_BASE + urllib.parse.quote(full_repo_path)
+                    is_video_line = False
+
+                processed_lines.append(line)
+            # --- KẾT THÚC LOGIC MỚI ---
+
             insert_idx = 1
-            for i, line in enumerate(clean_lines):
+            for i, line in enumerate(processed_lines):
                 if line.startswith(("#EXT-X-VERSION", "#EXTM3U")):
                     insert_idx = i + 1
 
             # Ghép intro và subtitle vào m3u8
             to_insert = intro_lines + new_media_lines
-            final_str = "\n".join(clean_lines[:insert_idx] + to_insert + clean_lines[insert_idx:]) + "\n"
+            final_str = "\n".join(processed_lines[:insert_idx] + to_insert + processed_lines[insert_idx:]) + "\n"
             
             with open(file_path, "w", encoding="utf-8") as f:
                 f.write(final_str)
