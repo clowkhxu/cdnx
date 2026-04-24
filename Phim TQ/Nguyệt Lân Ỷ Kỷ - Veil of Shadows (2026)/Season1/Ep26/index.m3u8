@@ -11,8 +11,6 @@
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Thai",LANGUAGE="th",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20TQ/Nguy%E1%BB%87t%20L%C3%A2n%20%E1%BB%B6%20K%E1%BB%B7%20-%20Veil%20of%20Shadows%20%282026%29/Season1/Ep26/ep26_tha_7.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Vietnamese",LANGUAGE="vi",DEFAULT=YES,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20TQ/Nguy%E1%BB%87t%20L%C3%A2n%20%E1%BB%B6%20K%E1%BB%B7%20-%20Veil%20of%20Shadows%20%282026%29/Season1/Ep26/ep26_vie_8.vtt"
 #EXT-X-PLAYLIST-TYPE:VOD
-#EXT-X-TARGETDURATION:10
-#EXT-X-MEDIA-SEQUENCE:0
 #EXTINF:6.040000,
 https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/b17f82abf393df1b063dc462d0d9e0e9|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/004c046edd5de10481a4079dbd9a74ed|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/44c5a096505b0a1f69bf6e2d55634afe
 #EXTINF:4.000000,

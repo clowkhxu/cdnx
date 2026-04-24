@@ -10,8 +10,6 @@
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Spanish",LANGUAGE="es",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20TQ/S%E1%BB%9F%20Ki%E1%BB%81u%20Truy%E1%BB%87n%20-%20Rebirth/Season2/Ep23/ep23_spa_5.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Vietnamese",LANGUAGE="vi",DEFAULT=YES,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20TQ/S%E1%BB%9F%20Ki%E1%BB%81u%20Truy%E1%BB%87n%20-%20Rebirth/Season2/Ep23/ep23_vie_6.vtt"
 #EXT-X-PLAYLIST-TYPE:VOD
-#EXT-X-TARGETDURATION:10
-#EXT-X-MEDIA-SEQUENCE:0
 #EXTINF:5.200000,
 http://s3-eu-west-1.amazonaws.com/lecturequizuploads/ca5a3f0b-b482-418e-be48-cb47da66fefa|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/a357efaa-7a6b-4fdb-85d9-eb6a247c577d
 #EXTINF:6.000000,

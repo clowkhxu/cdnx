@@ -10,8 +10,6 @@
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Spanish",LANGUAGE="es",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20TQ/S%E1%BB%9F%20Ki%E1%BB%81u%20Truy%E1%BB%87n%20-%20Rebirth/Season2/Ep24/ep24_spa_5.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Vietnamese",LANGUAGE="vi",DEFAULT=YES,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20TQ/S%E1%BB%9F%20Ki%E1%BB%81u%20Truy%E1%BB%87n%20-%20Rebirth/Season2/Ep24/ep24_vie_6.vtt"
 #EXT-X-PLAYLIST-TYPE:VOD
-#EXT-X-TARGETDURATION:10
-#EXT-X-MEDIA-SEQUENCE:0
 #EXTINF:5.200000,
 http://s3-eu-west-1.amazonaws.com/lecturequizuploads/83700bf7-1552-446f-9172-06220bda5d86|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/57c569bc-23c7-4d2d-9bc6-ceb38bcbea30
 #EXTINF:6.000000,

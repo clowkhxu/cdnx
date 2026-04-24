@@ -10,8 +10,6 @@
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Spanish",LANGUAGE="es",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20TQ/S%E1%BB%9F%20Ki%E1%BB%81u%20Truy%E1%BB%87n%20-%20Rebirth/Season2/Ep10/ep10_spa_5.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Vietnamese",LANGUAGE="vi",DEFAULT=YES,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20TQ/S%E1%BB%9F%20Ki%E1%BB%81u%20Truy%E1%BB%87n%20-%20Rebirth/Season2/Ep10/ep10_vie_6.vtt"
 #EXT-X-PLAYLIST-TYPE:VOD
-#EXT-X-TARGETDURATION:10
-#EXT-X-MEDIA-SEQUENCE:0
 #EXTINF:5.200000,
 https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/83dc7d9b0d8171c99ee1ef2cb5beb323|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/e59441c16cd841942402e27f4128e794
 #EXTINF:6.000000,

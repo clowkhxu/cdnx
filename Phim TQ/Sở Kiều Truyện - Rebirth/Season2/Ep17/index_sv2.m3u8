@@ -10,8 +10,6 @@
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Spanish",LANGUAGE="es",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20TQ/S%E1%BB%9F%20Ki%E1%BB%81u%20Truy%E1%BB%87n%20-%20Rebirth/Season2/Ep17/ep17_spa_5.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Vietnamese",LANGUAGE="vi",DEFAULT=YES,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20TQ/S%E1%BB%9F%20Ki%E1%BB%81u%20Truy%E1%BB%87n%20-%20Rebirth/Season2/Ep17/ep17_vie_6.vtt"
 #EXT-X-PLAYLIST-TYPE:VOD
-#EXT-X-TARGETDURATION:10
-#EXT-X-MEDIA-SEQUENCE:0
 #EXTINF:5.200000,
 http://s3-eu-west-1.amazonaws.com/lecturequizuploads/98c7cebe-2f2d-4e54-b451-fc90fd684d34|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/51d65963-1b6d-48c6-b1f7-1e869d5048d9
 #EXTINF:6.000000,

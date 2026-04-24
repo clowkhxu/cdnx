@@ -10,8 +10,6 @@
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Spanish",LANGUAGE="es",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20TQ/S%E1%BB%9F%20Ki%E1%BB%81u%20Truy%E1%BB%87n%20-%20Rebirth/Season2/Ep22/ep22_spa_5.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Vietnamese",LANGUAGE="vi",DEFAULT=YES,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20TQ/S%E1%BB%9F%20Ki%E1%BB%81u%20Truy%E1%BB%87n%20-%20Rebirth/Season2/Ep22/ep22_vie_6.vtt"
 #EXT-X-PLAYLIST-TYPE:VOD
-#EXT-X-TARGETDURATION:10
-#EXT-X-MEDIA-SEQUENCE:0
 #EXTINF:5.200000,
 http://s3-eu-west-1.amazonaws.com/lecturequizuploads/867f2d2d-3804-40bc-807b-b02d5fd975b8|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/e45eb942-f10b-4da9-a2fe-7a73ea1b47c2
 #EXTINF:6.000000,

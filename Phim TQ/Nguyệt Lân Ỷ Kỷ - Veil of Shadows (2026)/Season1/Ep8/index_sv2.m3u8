@@ -11,8 +11,6 @@
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Thai",LANGUAGE="th",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20TQ/Nguy%E1%BB%87t%20L%C3%A2n%20%E1%BB%B6%20K%E1%BB%B7%20-%20Veil%20of%20Shadows%20%282026%29/Season1/Ep8/ep8_tha_7.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Vietnamese",LANGUAGE="vi",DEFAULT=YES,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20TQ/Nguy%E1%BB%87t%20L%C3%A2n%20%E1%BB%B6%20K%E1%BB%B7%20-%20Veil%20of%20Shadows%20%282026%29/Season1/Ep8/ep8_vie_8.vtt"
 #EXT-X-PLAYLIST-TYPE:VOD
-#EXT-X-TARGETDURATION:10
-#EXT-X-MEDIA-SEQUENCE:0
 #EXTINF:7.080000,
 http://s3-eu-west-1.amazonaws.com/lecturequizuploads/80701a22-22f2-4c5a-9710-5313b1ae98fb|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/39e3ac52-f8e4-4b2c-87fe-f468f79902f9|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/15a76601-179a-490a-8bff-ab5b50d06e5d|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/7873cdfa-e40e-44de-b75c-ca3c02033164
 #EXTINF:6.360000,

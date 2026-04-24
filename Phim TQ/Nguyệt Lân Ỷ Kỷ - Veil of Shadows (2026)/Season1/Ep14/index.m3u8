@@ -11,8 +11,6 @@
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Thai",LANGUAGE="th",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20TQ/Nguy%E1%BB%87t%20L%C3%A2n%20%E1%BB%B6%20K%E1%BB%B7%20-%20Veil%20of%20Shadows%20%282026%29/Season1/Ep14/ep14_tha_7.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Vietnamese",LANGUAGE="vi",DEFAULT=YES,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20TQ/Nguy%E1%BB%87t%20L%C3%A2n%20%E1%BB%B6%20K%E1%BB%B7%20-%20Veil%20of%20Shadows%20%282026%29/Season1/Ep14/ep14_vie_8.vtt"
 #EXT-X-PLAYLIST-TYPE:VOD
-#EXT-X-TARGETDURATION:10
-#EXT-X-MEDIA-SEQUENCE:0
 #EXTINF:7.080000,
 https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/56e9a0c1472298aad136e8c03f6fe022|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/4baf3012c6ea8112fd6c0b7bdd24f3f9|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/3e0c2c83985f4558b7c9adf9beee1146|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/24bc96b8c046fc6455c4a3e36dbae810
 #EXTINF:6.360000,
