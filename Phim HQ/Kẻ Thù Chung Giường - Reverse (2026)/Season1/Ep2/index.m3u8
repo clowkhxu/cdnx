@@ -9,8 +9,6 @@
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Spanish",LANGUAGE="es",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20HQ/K%E1%BA%BB%20Th%C3%B9%20Chung%20Gi%C6%B0%E1%BB%9Dng%20-%20Reverse%20%282026%29/Season1/Ep2/ep2_spa_2.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Vietnamese",LANGUAGE="vi",DEFAULT=YES,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20HQ/K%E1%BA%BB%20Th%C3%B9%20Chung%20Gi%C6%B0%E1%BB%9Dng%20-%20Reverse%20%282026%29/Season1/Ep2/ep2_vie_72.vtt"
 #EXT-X-PLAYLIST-TYPE:VOD
-#EXT-X-TARGETDURATION:10
-#EXT-X-MEDIA-SEQUENCE:0
 #EXTINF:8.075000,
 https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/9f42629c041ac55fd01bbc2088881da9|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/b53ef1c11b129d2e5e8f4c653394398b|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/e779900e8db104b74f764a1452b1a530|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/f85380bdebb0649fe885ae781db8281b|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/cb26df52e765dc347d308837c14f3fab
 #EXTINF:4.004000,
