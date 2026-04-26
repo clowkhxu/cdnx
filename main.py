@@ -60,7 +60,6 @@ def organize_files_from_source(base_dir):
     for root_dir, dirs, files in os.walk(SOURCE_DIR):
         rel_dir = os.path.relpath(root_dir, SOURCE_DIR)
         
-        # Xử lý tên thư mục đích (Ep1, Ep2...)
         dest_sub_dir = rel_dir
         if rel_dir != "." and rel_dir.lower().startswith("ep"):
             dest_sub_dir = "Ep" + rel_dir[2:]
@@ -76,7 +75,6 @@ def organize_files_from_source(base_dir):
             dest_name = filename
             f_lower = filename.lower()
 
-            # Logic đổi tên file m3u8: ep1.m3u8 -> index.m3u8, ep1_sv2.m3u8 -> index_sv2.m3u8
             if f_lower.endswith(".m3u8"):
                 if "_sv2" in f_lower:
                     dest_name = "index_sv2.m3u8"
@@ -94,19 +92,14 @@ def update_playlist_files(base_dir, repo_sub_path, intro_end):
         return
 
     for root_dir, dirs, files in os.walk(base_dir):
-        # Lấy danh sách file vtt trong thư mục hiện tại
         vtt_files = sorted([f for f in files if f.endswith('.vtt')])
-        
         rel_dir = os.path.relpath(root_dir, base_dir)
-        # Đường dẫn tương đối phục vụ URL Github
         current_repo_path = repo_sub_path if rel_dir == "." else f"{repo_sub_path}{rel_dir.replace(os.sep, '/')}/"
 
-        # 1. Tạo danh sách các dòng Subtitle
         new_media_lines = []
         for vtt in vtt_files:
             code = "unknown"
             for key in LANG_MAP:
-                # Tìm mã ngôn ngữ trong tên file vtt (ví dụ: ep1_vie_4.vtt -> vie)
                 if f"_{key}_" in f"_{vtt.lower()}_" or vtt.lower().startswith(f"{key}_"):
                     code = key
                     break
@@ -120,7 +113,6 @@ def update_playlist_files(base_dir, repo_sub_path, intro_end):
                     f'DEFAULT={info["default"]},AUTOSELECT=YES,URI="{encoded_uri}"')
             new_media_lines.append(line)
 
-        # 2. Xử lý các file index.m3u8 và index_sv2.m3u8
         for filename in ["index.m3u8", "index_sv2.m3u8"]:
             file_path = os.path.join(root_dir, filename)
             if not os.path.exists(file_path):
@@ -129,39 +121,42 @@ def update_playlist_files(base_dir, repo_sub_path, intro_end):
             with open(file_path, "r", encoding="utf-8") as f:
                 content = f.readlines()
 
-            # Chỉ giữ lại các dòng chứa thông tin segment video (EXTINF và file .ts hoặc link video)
-            # Loại bỏ toàn bộ Header cũ để ghi đè mới
+            # --- TRÍCH XUẤT CÁC GIÁ TRỊ CŨ HOẶC ĐỂ MẶC ĐỊNH ---
+            target_duration = "10" # Mặc định
+            media_sequence = "0"   # Mặc định
             preserved_segments = []
-            is_collecting = False
+            
             for line in content:
                 line = line.strip()
-                if line.startswith("#EXTINF") or (not line.startswith("#") and line):
-                    preserved_segments.append(line)
-                elif line.startswith("#EXT-X-ENDLIST"):
+                if "#EXT-X-TARGETDURATION" in line:
+                    target_duration = line.split(":")[-1]
+                elif "#EXT-X-MEDIA-SEQUENCE" in line:
+                    media_sequence = line.split(":")[-1]
+                elif line.startswith("#EXTINF") or (not line.startswith("#") and line) or line.startswith("#EXT-X-ENDLIST"):
                     preserved_segments.append(line)
 
-            # 3. Xây dựng cấu trúc file mới
+            # --- XÂY DỰNG LẠI HEADER ---
             header = [
                 "#EXTM3U",
-                "#EXT-X-VERSION:3"
+                "#EXT-X-VERSION:3",
+                f"#EXT-X-TARGETDURATION:{target_duration}",
+                f"#EXT-X-MEDIA-SEQUENCE:{media_sequence}"
             ]
             
-            # Thêm các dòng subtitle
+            # Thêm Subtitles
             header.extend(new_media_lines)
             
-            # Thêm cấu hình Skip Intro nếu có
+            # Thêm Skip Intro
             if intro_end and intro_end.strip().isdigit():
                 header.append(f"#EXT-X-INTRO:START=0,END={intro_end.strip()}")
             
-            # Thêm dòng VOD type
             header.append("#EXT-X-PLAYLIST-TYPE:VOD")
 
-            # Kết hợp Header và Segments
             final_content = "\n".join(header + preserved_segments) + "\n"
             
             with open(file_path, "w", encoding="utf-8") as f:
                 f.write(final_content)
-            print(f"📝 [Update] {os.path.relpath(file_path, base_dir)} ({len(new_media_lines)} subs added)")
+            print(f"📝 [Update] {os.path.relpath(file_path, base_dir)} (Duration: {target_duration}, Seq: {media_sequence})")
 
 if __name__ == "__main__":
     print("--- Tool Xử Lý M3U8 & Subtitles ---")
@@ -171,19 +166,12 @@ if __name__ == "__main__":
         print("⚠️ Bạn chưa chọn thư mục. Đã hủy!")
     else:
         try:
-            # Tính toán path tương đối so với file script để làm path trên Github
-            # Giả định folder chứa script là root của repo (hoặc tương đương)
-            # Nếu script nằm ngoài repo, bạn có thể cần chỉnh lại logic REPO_SUB_PATH
             rel_path = os.path.relpath(BASE_DIR, CURRENT_DIR)
-            if rel_path == ".":
-                REPO_SUB_PATH = ""
-            else:
-                REPO_SUB_PATH = rel_path.replace("\\", "/") + "/"
+            REPO_SUB_PATH = "" if rel_path == "." else rel_path.replace("\\", "/") + "/"
         except ValueError:
             REPO_SUB_PATH = "" 
 
         print(f"📁 Thư mục đích: {BASE_DIR}")
-        print(f"🔗 Base Path: {REPO_SUB_PATH}")
         
         organize_files_from_source(BASE_DIR)
         update_playlist_files(BASE_DIR, REPO_SUB_PATH, INTRO_END)
