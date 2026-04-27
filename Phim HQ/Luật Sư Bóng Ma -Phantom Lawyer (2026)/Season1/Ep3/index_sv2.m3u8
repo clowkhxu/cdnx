@@ -1,5 +1,7 @@
 #EXTM3U
 #EXT-X-VERSION:3
+#EXT-X-TARGETDURATION:10
+#EXT-X-MEDIA-SEQUENCE:0
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="UNKNOWN",LANGUAGE="unknown",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20HQ/Lu%E1%BA%ADt%20S%C6%B0%20B%C3%B3ng%20Ma%20-Phantom%20Lawyer%20%282026%29/Season1/Ep3/ep3_ara_1.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Chinese",LANGUAGE="zh",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20HQ/Lu%E1%BA%ADt%20S%C6%B0%20B%C3%B3ng%20Ma%20-Phantom%20Lawyer%20%282026%29/Season1/Ep3/ep3_chi_12.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",LANGUAGE="en",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20HQ/Lu%E1%BA%ADt%20S%C6%B0%20B%C3%B3ng%20Ma%20-Phantom%20Lawyer%20%282026%29/Season1/Ep3/ep3_eng_3.vtt"
@@ -14,8 +16,6 @@
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Turkish",LANGUAGE="tr",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20HQ/Lu%E1%BA%ADt%20S%C6%B0%20B%C3%B3ng%20Ma%20-Phantom%20Lawyer%20%282026%29/Season1/Ep3/ep3_tur_10.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Vietnamese",LANGUAGE="vi",DEFAULT=YES,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20HQ/Lu%E1%BA%ADt%20S%C6%B0%20B%C3%B3ng%20Ma%20-Phantom%20Lawyer%20%282026%29/Season1/Ep3/ep3_vie_11.vtt"
 #EXT-X-PLAYLIST-TYPE:VOD
-#EXT-X-TARGETDURATION:10
-#EXT-X-MEDIA-SEQUENCE:0
 #EXTINF:6.047000,
 http://s3-eu-west-1.amazonaws.com/lecturequizuploads/bcef88a9-2785-4373-ad29-f845985b1fbe|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/02a4d1bc-069c-4c1d-824e-a52636ce8b86|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/86b6b8fa-b307-4299-8bda-258e1302a72c|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/6dd22c37-0d37-4d66-a04c-c67dedb8b70d
 #EXTINF:4.003000,

@@ -1,5 +1,7 @@
 #EXTM3U
 #EXT-X-VERSION:3
+#EXT-X-TARGETDURATION:10
+#EXT-X-MEDIA-SEQUENCE:0
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="UNKNOWN",LANGUAGE="unknown",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20HQ/Lu%E1%BA%ADt%20S%C6%B0%20B%C3%B3ng%20Ma%20-Phantom%20Lawyer%20%282026%29/Season1/Ep2/ep2_ara_2.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Chinese",LANGUAGE="zh",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20HQ/Lu%E1%BA%ADt%20S%C6%B0%20B%C3%B3ng%20Ma%20-Phantom%20Lawyer%20%282026%29/Season1/Ep2/ep2_chi_13.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",LANGUAGE="en",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20HQ/Lu%E1%BA%ADt%20S%C6%B0%20B%C3%B3ng%20Ma%20-Phantom%20Lawyer%20%282026%29/Season1/Ep2/ep2_eng_4.vtt"
@@ -15,8 +17,6 @@
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Turkish",LANGUAGE="tr",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20HQ/Lu%E1%BA%ADt%20S%C6%B0%20B%C3%B3ng%20Ma%20-Phantom%20Lawyer%20%282026%29/Season1/Ep2/ep2_tur_11.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Vietnamese",LANGUAGE="vi",DEFAULT=YES,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20HQ/Lu%E1%BA%ADt%20S%C6%B0%20B%C3%B3ng%20Ma%20-Phantom%20Lawyer%20%282026%29/Season1/Ep2/ep2_vie_12.vtt"
 #EXT-X-PLAYLIST-TYPE:VOD
-#EXT-X-TARGETDURATION:10
-#EXT-X-MEDIA-SEQUENCE:0
 #EXTINF:7.965000,
 http://s3-eu-west-1.amazonaws.com/lecturequizuploads/7497f6cb-fb47-47ab-b364-0569abc4542b|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/09be8177-d9a3-45af-9da7-1ab645a435a6|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/290d6617-ddb5-482f-8c56-4e8f660a428e|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/22e57f55-2c73-441e-b61d-161af3c1aef2|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/05b89bb0-46ae-4fd6-9dfd-361160a873b3|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/95450dda-88c3-4ba9-a9b7-879777320717
 #EXTINF:9.175000,

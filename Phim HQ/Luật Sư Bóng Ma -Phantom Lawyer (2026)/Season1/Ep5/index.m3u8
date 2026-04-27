@@ -1,5 +1,7 @@
 #EXTM3U
 #EXT-X-VERSION:3
+#EXT-X-TARGETDURATION:10
+#EXT-X-MEDIA-SEQUENCE:0
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="UNKNOWN",LANGUAGE="unknown",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20HQ/Lu%E1%BA%ADt%20S%C6%B0%20B%C3%B3ng%20Ma%20-Phantom%20Lawyer%20%282026%29/Season1/Ep5/ep5_ara_1.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Chinese",LANGUAGE="zh",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20HQ/Lu%E1%BA%ADt%20S%C6%B0%20B%C3%B3ng%20Ma%20-Phantom%20Lawyer%20%282026%29/Season1/Ep5/ep5_chi_12.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",LANGUAGE="en",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20HQ/Lu%E1%BA%ADt%20S%C6%B0%20B%C3%B3ng%20Ma%20-Phantom%20Lawyer%20%282026%29/Season1/Ep5/ep5_eng_3.vtt"
@@ -14,8 +16,6 @@
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Turkish",LANGUAGE="tr",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20HQ/Lu%E1%BA%ADt%20S%C6%B0%20B%C3%B3ng%20Ma%20-Phantom%20Lawyer%20%282026%29/Season1/Ep5/ep5_tur_10.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Vietnamese",LANGUAGE="vi",DEFAULT=YES,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20HQ/Lu%E1%BA%ADt%20S%C6%B0%20B%C3%B3ng%20Ma%20-Phantom%20Lawyer%20%282026%29/Season1/Ep5/ep5_vie_11.vtt"
 #EXT-X-PLAYLIST-TYPE:VOD
-#EXT-X-TARGETDURATION:10
-#EXT-X-MEDIA-SEQUENCE:0
 #EXTINF:6.047000,
 https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/37d44b243392a1781ae5486e924a9fbb|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/f065f10b10d4190a888e0b51fd2fdfd9|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/a9fae17290ee326a0a53d297b7957bd6|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/527e5c1948c7114a7087a213e5dc4d3a
 #EXTINF:4.003000,
