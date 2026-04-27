@@ -1,5 +1,7 @@
 #EXTM3U
 #EXT-X-VERSION:3
+#EXT-X-TARGETDURATION:10
+#EXT-X-MEDIA-SEQUENCE:0
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Chinese",LANGUAGE="zh",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20HQ/Kh%E1%BA%BF%20%C6%AF%E1%BB%9Bc%20Ho%C3%A0ng%20Gia%20-%20Perfect%20Crown%20%282026%29/Season1/Ep4/ep4_chi_10.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",LANGUAGE="en",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20HQ/Kh%E1%BA%BF%20%C6%AF%E1%BB%9Bc%20Ho%C3%A0ng%20Gia%20-%20Perfect%20Crown%20%282026%29/Season1/Ep4/ep4_eng_3.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="French",LANGUAGE="fr",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20HQ/Kh%E1%BA%BF%20%C6%AF%E1%BB%9Bc%20Ho%C3%A0ng%20Gia%20-%20Perfect%20Crown%20%282026%29/Season1/Ep4/ep4_fre_6.vtt"
@@ -11,8 +13,6 @@
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Spanish",LANGUAGE="es",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20HQ/Kh%E1%BA%BF%20%C6%AF%E1%BB%9Bc%20Ho%C3%A0ng%20Gia%20-%20Perfect%20Crown%20%282026%29/Season1/Ep4/ep4_spa_4.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Vietnamese",LANGUAGE="vi",DEFAULT=YES,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20HQ/Kh%E1%BA%BF%20%C6%AF%E1%BB%9Bc%20Ho%C3%A0ng%20Gia%20-%20Perfect%20Crown%20%282026%29/Season1/Ep4/ep4_vie_10.vtt"
 #EXT-X-PLAYLIST-TYPE:VOD
-#EXT-X-TARGETDURATION:10
-#EXT-X-MEDIA-SEQUENCE:0
 #EXTINF:7.548411,
 https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/9fd20d0371dd5112457605d7cdf16a68|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/5c0f53e4571121f19bca7a21081d3966|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/61f094ec13a9d4d7535d03a9ede89037|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/213801ee86884752a53a70307eaf45c7|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/54ee3c6b881165d909ba8e0fd10803d4|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/52aec827d722ae7bfbcb003501fd766d|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/b86fea16d578800bb1ea7974799b1bd4|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/471c6e177e2ef46658f7d42c865c968e|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/79fe62529cb60c144c7055196d3ce83c
 #EXTINF:2.960000,

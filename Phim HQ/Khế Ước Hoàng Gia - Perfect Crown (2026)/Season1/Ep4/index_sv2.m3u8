@@ -1,5 +1,7 @@
 #EXTM3U
 #EXT-X-VERSION:3
+#EXT-X-TARGETDURATION:10
+#EXT-X-MEDIA-SEQUENCE:0
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Chinese",LANGUAGE="zh",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20HQ/Kh%E1%BA%BF%20%C6%AF%E1%BB%9Bc%20Ho%C3%A0ng%20Gia%20-%20Perfect%20Crown%20%282026%29/Season1/Ep4/ep4_chi_10.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",LANGUAGE="en",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20HQ/Kh%E1%BA%BF%20%C6%AF%E1%BB%9Bc%20Ho%C3%A0ng%20Gia%20-%20Perfect%20Crown%20%282026%29/Season1/Ep4/ep4_eng_3.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="French",LANGUAGE="fr",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20HQ/Kh%E1%BA%BF%20%C6%AF%E1%BB%9Bc%20Ho%C3%A0ng%20Gia%20-%20Perfect%20Crown%20%282026%29/Season1/Ep4/ep4_fre_6.vtt"
@@ -11,8 +13,6 @@
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Spanish",LANGUAGE="es",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20HQ/Kh%E1%BA%BF%20%C6%AF%E1%BB%9Bc%20Ho%C3%A0ng%20Gia%20-%20Perfect%20Crown%20%282026%29/Season1/Ep4/ep4_spa_4.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Vietnamese",LANGUAGE="vi",DEFAULT=YES,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20HQ/Kh%E1%BA%BF%20%C6%AF%E1%BB%9Bc%20Ho%C3%A0ng%20Gia%20-%20Perfect%20Crown%20%282026%29/Season1/Ep4/ep4_vie_10.vtt"
 #EXT-X-PLAYLIST-TYPE:VOD
-#EXT-X-TARGETDURATION:10
-#EXT-X-MEDIA-SEQUENCE:0
 #EXTINF:7.548411,
 http://s3-eu-west-1.amazonaws.com/lecturequizuploads/7a5f9022-853f-4b91-90a0-99c51c77b02a|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/0c47e93d-f8ee-4022-9abb-e86be5b166b1|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/fe617bc0-ff95-4cab-ab9f-b7881a5951e2|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/5208a4d7-eb87-48c8-b6e6-5648e5bf6687|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/c2ff69ec-be81-4769-a30a-13994f243567|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/e3a416f1-eead-4a81-b8ae-5e827f9441a1|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/99c41ea0-f308-483c-85d7-6b41fced2f9c|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/1fde1082-27c4-47a2-88d5-25a1ef98fc0d|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/2188c4a8-c48d-4063-a233-b3ba53dd8f0a
 #EXTINF:2.960000,
