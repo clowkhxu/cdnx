@@ -45,7 +45,7 @@ def get_user_inputs():
 
     intro_end = simpledialog.askstring(
         "Cấu hình Skip Intro", 
-        "Nhập thời gian KẾT THÚC intro (giây).\nVí dụ: 90\n(Để trống nếu không muốn thêm thẻ này)",
+        "Nhập thời gian KẾT THÚC intro (giây).\nVí dụ: 90\n(Để trống nếu muốn giữ nguyên cấu hình cũ hoặc không thêm)",
         parent=root
     )
     
@@ -54,7 +54,7 @@ def get_user_inputs():
 def organize_files_from_source(base_dir):
     print(f"\n🚀 --- BẮT ĐẦU CHUYỂN FILE & ĐỔI TÊN ---")
     if not os.path.exists(SOURCE_DIR):
-        print(f"⚠️ Không tìm thấy nguồn: {SOURCE_DIR}")
+        print(f"⚠️ Không tìm thấy nguồn: {SOURCE_DIR} (Sẽ bỏ qua bước copy, chuyển sang cập nhật M3U8)")
         return
 
     for root_dir, dirs, files in os.walk(SOURCE_DIR):
@@ -96,6 +96,7 @@ def update_playlist_files(base_dir, repo_sub_path, intro_end):
         rel_dir = os.path.relpath(root_dir, base_dir)
         current_repo_path = repo_sub_path if rel_dir == "." else f"{repo_sub_path}{rel_dir.replace(os.sep, '/')}/"
 
+        # --- 1. Tạo danh sách sub mới từ file .vtt hiện có ---
         new_media_lines = []
         for vtt in vtt_files:
             code = "unknown"
@@ -113,6 +114,7 @@ def update_playlist_files(base_dir, repo_sub_path, intro_end):
                     f'DEFAULT={info["default"]},AUTOSELECT=YES,URI="{encoded_uri}"')
             new_media_lines.append(line)
 
+        # --- 2. Kiểm tra và cập nhật file m3u8 ---
         for filename in ["index.m3u8", "index_sv2.m3u8"]:
             file_path = os.path.join(root_dir, filename)
             if not os.path.exists(file_path):
@@ -121,21 +123,44 @@ def update_playlist_files(base_dir, repo_sub_path, intro_end):
             with open(file_path, "r", encoding="utf-8") as f:
                 content = f.readlines()
 
-            # --- TRÍCH XUẤT CÁC GIÁ TRỊ CŨ HOẶC ĐỂ MẶC ĐỊNH ---
-            target_duration = "10" # Mặc định
-            media_sequence = "0"   # Mặc định
+            target_duration = "10" 
+            media_sequence = "0"  
             preserved_segments = []
             
+            # Lưu trữ Sub và Intro cũ để không bị mất/trùng lặp
+            existing_subs = {} 
+            existing_intro = None
+
             for line in content:
                 line = line.strip()
+                if not line:
+                    continue
+                
                 if "#EXT-X-TARGETDURATION" in line:
                     target_duration = line.split(":")[-1]
                 elif "#EXT-X-MEDIA-SEQUENCE" in line:
                     media_sequence = line.split(":")[-1]
+                elif line.startswith("#EXT-X-MEDIA:TYPE=SUBTITLES"):
+                    # Tách lấy URI để làm key (kiểm tra trùng lặp)
+                    uri_match = re.search(r'URI="([^"]+)"', line)
+                    if uri_match:
+                        existing_subs[uri_match.group(1)] = line
+                    else:
+                        existing_subs[line] = line # Fallback
+                elif line.startswith("#EXT-X-INTRO"):
+                    existing_intro = line
                 elif line.startswith("#EXTINF") or (not line.startswith("#") and line) or line.startswith("#EXT-X-ENDLIST"):
                     preserved_segments.append(line)
 
-            # --- XÂY DỰNG LẠI HEADER ---
+            # --- 3. Gộp Sub mới vào Sub cũ (chống trùng lặp bằng URI) ---
+            for new_line in new_media_lines:
+                uri_match = re.search(r'URI="([^"]+)"', new_line)
+                if uri_match:
+                    existing_subs[uri_match.group(1)] = new_line # Thêm mới hoặc ghi đè nếu trùng URI
+                else:
+                    existing_subs[new_line] = new_line
+
+            # --- 4. XÂY DỰNG LẠI HEADER ---
             header = [
                 "#EXTM3U",
                 "#EXT-X-VERSION:3",
@@ -143,20 +168,23 @@ def update_playlist_files(base_dir, repo_sub_path, intro_end):
                 f"#EXT-X-MEDIA-SEQUENCE:{media_sequence}"
             ]
             
-            # Thêm Subtitles
-            header.extend(new_media_lines)
+            # Thêm danh sách Sub đã được lọc trùng lặp
+            header.extend(list(existing_subs.values()))
             
-            # Thêm Skip Intro
+            # Xử lý Skip Intro: Nếu có nhập số mới -> Dùng mới. Nếu bỏ trống -> Giữ lại intro cũ (nếu có)
             if intro_end and intro_end.strip().isdigit():
                 header.append(f"#EXT-X-INTRO:START=0,END={intro_end.strip()}")
+            elif existing_intro:
+                header.append(existing_intro)
             
             header.append("#EXT-X-PLAYLIST-TYPE:VOD")
 
+            # --- 5. Ghi lại file ---
             final_content = "\n".join(header + preserved_segments) + "\n"
             
             with open(file_path, "w", encoding="utf-8") as f:
                 f.write(final_content)
-            print(f"📝 [Update] {os.path.relpath(file_path, base_dir)} (Duration: {target_duration}, Seq: {media_sequence})")
+            print(f"📝 [Update] {os.path.relpath(file_path, base_dir)} (Duration: {target_duration}, Seq: {media_sequence}, Subs: {len(existing_subs)})")
 
 if __name__ == "__main__":
     print("--- Tool Xử Lý M3U8 & Subtitles ---")
