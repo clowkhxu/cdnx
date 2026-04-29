@@ -1,10 +1,10 @@
 #EXTM3U
 #EXT-X-VERSION:3
+#EXT-X-TARGETDURATION:10
+#EXT-X-MEDIA-SEQUENCE:0
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",LANGUAGE="en",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20%C3%82M/Daredevil%20T%C3%A1i%20Sinh%20-%20Daredevil%20Born%20Again/Season2/Ep3/ep3_eng_0.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Vietnamese",LANGUAGE="vi",DEFAULT=YES,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20%C3%82M/Daredevil%20T%C3%A1i%20Sinh%20-%20Daredevil%20Born%20Again/Season2/Ep3/ep3_vie_9.vtt"
 #EXT-X-PLAYLIST-TYPE:VOD
-#EXT-X-TARGETDURATION:10
-#EXT-X-MEDIA-SEQUENCE:0
 #EXTINF:6.999000,
 http://s3-eu-west-1.amazonaws.com/lecturequizuploads/831b38b5-2a3a-4bdd-ac4c-04489b8f91fc|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/ef254869-14a2-4529-961a-e208a15de0ec|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/29712241-4461-4789-9303-5b8f2c6f4ac5
 #EXTINF:5.082000,
