@@ -1,0 +1,2076 @@
+WEBVTT
+
+01:40.000 --> 01:42.720
+NHÀ MÁY XI MĂNG THANH TÙNG
+THÀNH PHỐ NGỤY DƯƠNG
+
+01:45.000 --> 01:50.240
+TẬP TRUNG CẢI CÁCH, ĐẨY MẠNH SẢN XUẤT
+
+02:00.560 --> 02:03.880
+NHÀ MÁY XI MĂNG THANH TÙNG
+
+02:17.400 --> 02:20.000
+Ông chủ, đang bận à? Làm một chai không?
+
+02:20.080 --> 02:21.040
+Không, cảm ơn.
+
+02:23.640 --> 02:24.880
+Tôi muốn hỏi thăm chút,
+
+02:24.960 --> 02:27.160
+hôm nay ông chủ nhà máy xi măng
+có đến không?
+
+02:27.240 --> 02:28.560
+Anh nói ông chủ nào?
+
+02:28.640 --> 02:30.400
+Ông chủ Tống, Tống Thanh Tùng.
+
+02:31.000 --> 02:33.680
+Tôi không biết đâu.
+Chiếc xe kia đỗ không đúng chỗ,
+
+02:33.760 --> 02:36.280
+nếu anh không sửa xe
+thì đi chỗ khác đi, được chứ?
+
+02:36.920 --> 02:39.040
+Sửa chứ, đến đây là để sửa xe mà.
+
+02:39.120 --> 02:41.680
+Xe tôi bị va quệt.
+Anh kiểm tra rồi báo giá giúp với.
+
+02:44.360 --> 02:45.440
+Đỗ đúng chỗ lắm.
+
+02:49.040 --> 02:51.240
+Cái xe này của anh bị hỏng hơi nặng đấy.
+
+02:51.760 --> 02:53.080
+Người đâm chạy mất rồi à?
+
+02:56.440 --> 02:59.280
+Anh đừng nhìn nữa,
+anh không gặp được ông Tống đâu.
+
+02:59.960 --> 03:00.800
+Tại sao?
+
+03:00.880 --> 03:02.360
+Người có thể gặp được ông Tống
+
+03:02.440 --> 03:03.760
+đã chẳng đến hỏi thăm tôi.
+
+03:06.440 --> 03:07.800
+Anh xem, cũng lạ thật,
+
+03:08.560 --> 03:10.640
+cổng khóa kỹ thế kia,
+
+03:10.720 --> 03:13.160
+người gác cổng thì cao to vạm vỡ.
+
+03:13.240 --> 03:15.400
+Cứ như canh kho vũ khí.
+
+03:15.480 --> 03:16.480
+Anh không biết à?
+
+03:17.000 --> 03:18.360
+Mấy ngày trước ở đây
+
+03:18.440 --> 03:21.400
+có hơn 200 người đánh nhau, dữ dội lắm.
+
+03:21.480 --> 03:23.040
+Tôi còn bị mất mấy cái cờ lê.
+
+03:23.120 --> 03:25.400
+Đánh nhau à? Đánh với ai thế?
+
+03:25.480 --> 03:26.640
+Đỗ Què chứ ai.
+
+03:27.160 --> 03:28.680
+Tử thù của ông Tống.
+
+03:28.760 --> 03:29.800
+Sao lại đánh nhau?
+
+03:29.880 --> 03:32.560
+Tranh giành làm ăn.
+Tranh giành mối làm ăn ở mỏ.
+
+03:33.680 --> 03:34.720
+Mỏ?
+
+03:35.600 --> 03:36.800
+Mỏ Đông Sơn à?
+
+03:37.720 --> 03:38.920
+Nơi này còn mỏ nào khác?
+
+03:41.960 --> 03:44.200
+Của nhà nước, béo bở lắm.
+
+03:56.400 --> 03:58.520
+XI MĂNG THANH TÙNG
+
+04:16.600 --> 04:19.800
+QUẦY LỄ TÂN BATIYA
+
+04:19.880 --> 04:22.640
+Chú Nhiễm,
+điều tra xong mê cung dưới hầm rồi,
+
+04:22.720 --> 04:25.080
+tiếp theo
+là mê cung trên tầng đúng không ạ?
+
+04:25.880 --> 04:27.920
+Trên tầng phải dùng cách điều tra khác.
+
+04:28.000 --> 04:28.960
+Đổi cách khác?
+
+04:29.560 --> 04:30.960
+Dùng thuật toán Trémaux.
+
+04:31.040 --> 04:33.240
+Chỉ màu? Là chỉ có màu ạ?
+
+04:33.960 --> 04:35.040
+Đây này,
+
+04:35.760 --> 04:39.000
+thuật toán Trémaux
+là cách tốn thời gian nhất
+
+04:39.080 --> 04:40.240
+song dễ thành công nhất
+
+04:40.320 --> 04:42.400
+trong mọi cách tìm đường trong mê cung.
+
+04:42.480 --> 04:45.680
+Đại khái là phải đi lần lượt
+từng tuyến đường một,
+
+04:45.760 --> 04:48.320
+rồi đánh ký hiệu cẩn thận
+để tránh lặp lại sai lầm.
+
+04:48.400 --> 04:51.000
+Cuối cùng sẽ có thể
+tìm được đường đi đúng.
+
+04:51.080 --> 04:54.920
+Áp dụng vào trường hợp điều tra vụ án
+thì sẽ tìm ra manh mối.
+
+04:55.520 --> 04:58.320
+Chú Nhiễm, chú nói vòng vo quá.
+
+04:58.400 --> 05:00.400
+Cần gì chỉ màu chỉ mè, thế này là được.
+
+05:01.560 --> 05:03.760
+Đây là lối vào, đây là lối ra,
+
+05:04.360 --> 05:06.160
+như vậy là tìm thấy cách rồi mà?
+
+05:09.680 --> 05:10.680
+Đưa cho chú.
+
+05:25.360 --> 05:27.320
+HỒ SƠ ĐẤU THẦU KHAI THÁC MỎ ĐÔNG SƠN
+
+05:27.400 --> 05:28.440
+Vào đi.
+
+05:35.480 --> 05:38.760
+Sếp Tống, anh nghe em giải thích.
+Hôm qua em muốn…
+
+05:40.200 --> 05:42.160
+Tối qua cậu thể hiện không tệ,
+
+05:43.120 --> 05:44.520
+coi như vẫn có não.
+
+05:47.040 --> 05:48.040
+Đây là phần thưởng.
+
+05:49.200 --> 05:51.160
+Sếp Tống, đây là trách nhiệm của em mà.
+
+05:51.240 --> 05:52.360
+Trách nhiệm của cậu là cầm.
+
+05:52.440 --> 05:55.280
+Vậy… cảm ơn anh.
+
+06:00.840 --> 06:02.480
+Bao giờ cậu trả hơn 100.000 tệ
+
+06:02.560 --> 06:03.960
+bị trộm ở Nguyên Long Lý?
+
+06:04.560 --> 06:07.280
+Em trả lại ngay đây.
+
+06:07.880 --> 06:09.880
+Cậu chôn xác người phụ nữ kia ở đâu rồi?
+
+06:11.040 --> 06:13.240
+Hôm qua em ra ngoài, bị cảnh sát bám đuôi.
+
+06:13.320 --> 06:14.840
+Giờ em sẽ đi đào xác về ngay.
+
+06:15.520 --> 06:16.960
+Ai bảo cậu đào về hả?
+
+06:18.080 --> 06:19.400
+Cậu bị đần à?
+
+06:19.480 --> 06:21.200
+Vậy em không đào xác về thì…
+
+06:21.280 --> 06:25.160
+Đốt đi. Tiêu hủy đi.
+Nung chảy đi. Lo mà xử lý sạch sẽ cho tôi!
+
+06:25.240 --> 06:26.280
+Vâng.
+
+06:32.280 --> 06:34.680
+Trước khi tiêu hủy,
+chụp ảnh đem về đây cho tôi.
+
+06:34.760 --> 06:35.800
+Vâng.
+
+06:46.240 --> 06:47.440
+XƯỞNG SỬA XE
+
+06:47.520 --> 06:48.680
+Sếp Tống,
+
+06:48.760 --> 06:50.320
+tay cớm hôm qua vẫn chầu ở ngoài.
+
+06:50.400 --> 06:51.960
+Họ bám theo thì phải làm sao?
+
+06:52.040 --> 06:55.320
+Bản thân không xử lý sạch sẽ,
+còn nhờ ông đây lo hộ à?
+
+07:02.480 --> 07:05.200
+Nếu không xử lý việc này gọn gàng,
+bị cảnh sát phát hiện
+
+07:05.280 --> 07:06.520
+thì cậu đi mà tự thú.
+
+07:07.960 --> 07:09.040
+Cậu không đi,
+
+07:10.560 --> 07:12.200
+ông khiến cả nhà cậu biến mất.
+
+07:20.960 --> 07:22.880
+Để xem anh trốn được bao lâu.
+
+07:28.480 --> 07:30.600
+NHÀ MÁY XI MĂNG THANH TÙNG
+THÀNH PHỐ NGỤY DƯƠNG
+
+07:36.000 --> 07:38.960
+TÔI ĐƯA HIỂU HÀ ĐẾN NGUYÊN LONG LÝ. NHIỄM.
+
+07:39.040 --> 07:40.360
+Nguyên Long Lý?
+
+07:41.880 --> 07:43.560
+Tại sao phải đến đó chứ?
+
+07:43.640 --> 07:46.240
+NHÀ MÁY XI MĂNG THANH TÙNG
+THÀNH PHỐ NGỤY DƯƠNG
+
+07:57.120 --> 07:58.200
+Dừng lại!
+
+08:01.720 --> 08:02.560
+TIỆM SỬA XE TÂN PHONG
+
+08:11.800 --> 08:13.960
+Ai cho phép anh làm thế hả? Đồ khốn!
+
+08:14.560 --> 08:15.440
+Thằng khốn!
+
+08:17.280 --> 08:18.800
+Này!
+
+08:19.400 --> 08:21.440
+Tống Thanh Tùng! Thằng khốn!
+
+08:29.680 --> 08:30.920
+Cẩn thận đấy, Hiểu Hà!
+
+08:37.200 --> 08:39.440
+Hiểu Hà, cháu đi chậm thôi.
+
+08:40.919 --> 08:43.080
+Đỏ, da cam, vàng, lục,
+
+08:43.159 --> 08:44.280
+lam, chàm, tím.
+
+08:44.880 --> 08:46.680
+Đủ bộ anh em Hồ Lô rồi.
+
+09:13.080 --> 09:14.880
+Cái mông, mông to quá.
+
+09:17.000 --> 09:18.760
+- Cái mông to.
+- Làm gì thế?
+
+09:23.200 --> 09:25.160
+Buông tay ra! Buông tay ra xem nào!
+
+09:31.480 --> 09:33.160
+Con chuột bự! Hai ngón! Xâu Tiền!
+
+09:33.240 --> 09:36.480
+Tại sao bọn cháu ở đâu,
+chú cũng có mặt ở đó thế?
+
+09:36.560 --> 09:38.160
+Sao lại là cháu nữa vậy?
+
+09:38.800 --> 09:40.920
+Quản lý Tiền, trẻ con đang hỏi anh kìa.
+
+09:41.000 --> 09:42.440
+Cảnh sát Nhiễm,
+
+09:43.040 --> 09:46.920
+có người khiếu nại,
+bảo là có mùi hôi thối,
+
+09:47.000 --> 09:48.320
+nên tôi lên đây xem thử.
+
+09:48.400 --> 09:52.600
+Vốn tưởng rằng
+có người trồng hoa trồng cỏ,
+
+09:52.680 --> 09:55.080
+ai ngờ người ta lại nuôi gà.
+
+09:55.160 --> 09:56.200
+Quá đáng thật sự.
+
+09:58.080 --> 09:59.760
+Thế chú chui vào chuồng gà làm gì?
+
+10:00.880 --> 10:02.520
+Chú vào đếm gà.
+
+10:02.600 --> 10:04.800
+Không đếm rõ thì phạt tiền kiểu gì?
+
+10:05.400 --> 10:07.480
+Giờ tôi về ban quản lý gọi người đến ngay.
+
+10:07.560 --> 10:08.800
+Quá đáng thật sự.
+
+10:09.400 --> 10:11.080
+Quá đáng thật. Phải dọn cho sạch.
+
+10:13.400 --> 10:15.480
+Cái lồng gà này phải dọn cho sạch.
+
+10:15.560 --> 10:16.520
+Họ Tiền kia!
+
+10:16.600 --> 10:19.440
+- Khốn kiếp!
+- Cậu ơi.
+
+10:20.160 --> 10:21.000
+Cậu.
+
+10:22.680 --> 10:23.600
+Làm gì thế?
+
+10:25.800 --> 10:26.760
+Tiền Đại Quân!
+
+10:26.840 --> 10:27.680
+Cậu đừng làm càn.
+
+10:27.760 --> 10:29.280
+Hôm nay tao nói cho mà biết,
+
+10:29.360 --> 10:32.160
+mày dám động vào gà của tao
+là tao chặt tay mày!
+
+10:32.840 --> 10:35.520
+Cậu ơi, cậu đừng làm bừa nhé.
+Cảnh sát đang ở đây này.
+
+10:35.600 --> 10:36.920
+- Đừng làm bừa.
+- Ai là cậu mày?
+
+10:37.000 --> 10:38.600
+- Đừng làm bừa.
+- Đứng lại!
+
+10:38.680 --> 10:40.560
+- Đứng lại!
+- Đừng làm bừa!
+
+10:43.240 --> 10:44.320
+Cậu đừng làm bừa nhé!
+
+10:45.240 --> 10:46.600
+- Đồ khốn.
+- Đừng làm bừa.
+
+10:48.960 --> 10:51.400
+Ông ơi, ông giỏi thật đấy.
+
+10:51.480 --> 10:54.240
+Mấy con gà con đủ màu sắc này
+đều là ông nuôi hết ạ?
+
+10:57.040 --> 11:00.120
+Đúng vậy. Bé con, cháu có thích không?
+
+11:00.640 --> 11:03.000
+Nếu thích, ông tặng cháu một con.
+
+11:03.080 --> 11:04.600
+Cháu cảm ơn ông.
+
+11:08.800 --> 11:12.200
+Nhưng mà thôi ạ,
+mẹ cháu sẽ không cho cháu nuôi đâu.
+
+11:13.240 --> 11:14.280
+Cháu đợi một chút.
+
+11:35.680 --> 11:37.040
+Cháu cảm ơn ông.
+
+11:38.320 --> 11:41.320
+Không biết chú gà con ở trong này
+màu gì nhỉ.
+
+11:41.400 --> 11:42.320
+- Ơ kìa!
+- Ơ kìa!
+
+11:43.080 --> 11:44.400
+Đây là trứng sống mà.
+
+12:06.840 --> 12:11.080
+TRƯỜNG TRUNG HỌC ĐAN PHONG
+
+12:11.160 --> 12:13.120
+PHÒNG HIỆU TRƯỞNG
+
+12:17.600 --> 12:19.120
+Cảnh sát Hà, ở ngay đây.
+
+12:19.200 --> 12:21.160
+- Cảm ơn.
+- Không có gì.
+
+12:22.440 --> 12:23.480
+Mời vào.
+
+12:24.480 --> 12:26.960
+Chào hiệu trưởng Tần. Tôi là Hà Hiểu Hà,
+
+12:27.040 --> 12:28.880
+đến đây vì chuyện của Hàn Tử Ngang.
+
+12:28.960 --> 12:29.840
+Ồ.
+
+12:30.360 --> 12:32.480
+Cảnh sát Hà, mau ngồi đi.
+
+12:32.560 --> 12:33.680
+Cảm ơn.
+
+12:36.400 --> 12:38.560
+Hiệu trưởng Tần, tôi biết ông rất bận,
+
+12:38.640 --> 12:40.240
+nên tôi cố nói ngắn gọn thôi.
+
+12:40.320 --> 12:44.560
+Lần này tôi đến đây là muốn xin nhà trường
+cân nhắc kỹ lưỡng,
+
+12:44.640 --> 12:46.720
+thu hồi quyết định đuổi học Hàn Tử Ngang.
+
+12:47.600 --> 12:51.240
+Cảnh sát Hà,
+hôm qua tôi đã nói rất chi tiết
+
+12:51.320 --> 12:53.440
+với cô qua điện thoại rồi.
+
+12:54.400 --> 12:55.360
+Quyết định này
+
+12:55.440 --> 12:59.080
+chúng tôi đã cân nhắc vô cùng kỹ lưỡng
+rồi mới đưa ra.
+
+12:59.160 --> 13:00.280
+Nhưng mà…
+
+13:01.000 --> 13:02.840
+Cô hãy để tôi nói hết đã.
+
+13:03.720 --> 13:05.720
+Đây đâu phải quyết định của cá nhân tôi.
+
+13:06.400 --> 13:09.920
+Bình thường trong giờ học,
+Hàn Tử Ngang hay thẫn thờ.
+
+13:10.000 --> 13:12.480
+Hơn nữa còn thường xuyên
+nghỉ học không có lý do.
+
+13:12.560 --> 13:15.200
+Lần này thì hay rồi,
+không những nghỉ học không lý do,
+
+13:15.800 --> 13:18.240
+mà còn chém người ta
+bị thương ở ngoài trường.
+
+13:18.320 --> 13:19.840
+Hiệu trưởng, trước kia em ấy
+
+13:19.920 --> 13:21.680
+từng có hành vi bạo lực không?
+
+13:23.360 --> 13:24.360
+Theo tôi biết thì không.
+
+13:25.040 --> 13:29.360
+Giáo viên chủ nhiệm phản ánh rằng
+bình thường em ấy lầm lì ít nói.
+
+13:29.880 --> 13:34.360
+Nhưng chính kiểu lầm lì ít nói này
+mới dễ gây ra chuyện tày đình đấy.
+
+13:34.440 --> 13:35.680
+Đấy là định kiến thôi.
+
+13:36.360 --> 13:39.480
+Theo tôi biết, bình thường
+Hàn Tử Ngang đúng là khá hướng nội.
+
+13:39.560 --> 13:41.240
+Đó là vì cậu bé rất mê đọc sách.
+
+13:41.320 --> 13:44.600
+Tất nhiên những thứ nó đọc đều là
+mấy quyển truyện tranh 2D.
+
+13:44.680 --> 13:47.480
+Tôi nghĩ có lẽ thằng bé
+đã đưa thế giới ảo đó
+
+13:47.560 --> 13:48.720
+vào hiện thực.
+
+13:49.520 --> 13:51.720
+Nghe bảo Nguyên Long Lý là tòa nhà ma,
+
+13:51.800 --> 13:53.760
+nên cậu bé muốn đến đó thám hiểm.
+
+13:53.840 --> 13:55.360
+Vô tình gặp người vô gia cư,
+
+13:55.960 --> 13:59.080
+có lẽ cậu bé đã căng thẳng, sợ hãi,
+
+13:59.160 --> 14:01.960
+vì muốn bảo vệ bản thân
+nên mới làm người khác bị thương.
+
+14:02.040 --> 14:04.960
+Vậy cảnh sát Hà này,
+theo như cách nói của cô,
+
+14:05.040 --> 14:08.600
+Hàn Tử Ngang làm người khác bị thương
+là vì tự vệ?
+
+14:09.120 --> 14:10.120
+Tôi có thể thông cảm,
+
+14:10.720 --> 14:13.040
+nhưng phụ huynh học sinh
+thì khó mà thông cảm.
+
+14:13.120 --> 14:14.360
+Việc em ấy đâm người ta
+
+14:14.440 --> 14:15.640
+là sự thật đúng không?
+
+14:15.720 --> 14:17.760
+Nếu như em ấy đi học,
+
+14:17.840 --> 14:20.640
+các phụ huynh học sinh
+sẽ lo lắng nhường nào chứ?
+
+14:23.360 --> 14:26.280
+Hiện tại Hàn Tử Ngang
+vẫn đang nằm trong bệnh viện,
+
+14:26.360 --> 14:27.800
+hôn mê chưa tỉnh.
+
+14:27.880 --> 14:29.520
+Cảnh sát đang dốc sức điều tra
+
+14:29.600 --> 14:31.200
+về tính chất của vụ án này.
+
+14:31.280 --> 14:33.400
+Trước khi có kết quả cuối cùng,
+
+14:33.480 --> 14:36.320
+tôi muốn xin nhà trường
+đừng dễ dàng từ bỏ cậu bé.
+
+14:37.240 --> 14:39.600
+Vào lúc này mà có người chịu giúp cậu bé
+
+14:40.200 --> 14:42.200
+thì chẳng những giữ được cơ hội đến lớp,
+
+14:42.960 --> 14:44.640
+mà còn cứu được cả tương lai cậu bé.
+
+14:46.200 --> 14:47.440
+Hiệu trưởng Tần,
+
+14:48.080 --> 14:49.160
+thật ra
+
+14:50.360 --> 14:53.360
+ngày xưa tôi còn tệ hơn,
+còn nổi loạn hơn cậu bé.
+
+14:53.440 --> 14:57.960
+Nhưng năm đó, có một người
+không bao giờ từ bỏ tôi.
+
+14:58.040 --> 15:01.160
+Vào thời khắc then chốt,
+người đó đã kéo tôi trở lại,
+
+15:01.680 --> 15:03.240
+thế nên mới cứu vớt được tôi,
+
+15:03.320 --> 15:05.960
+giúp tôi trở thành
+một cảnh sát như bây giờ.
+
+15:07.360 --> 15:10.120
+Hiệu trưởng Tần,
+đối với một đứa trẻ mà nói,
+
+15:11.040 --> 15:14.480
+một quyết định
+đủ để thay đổi cả cuộc đời chúng.
+
+15:14.560 --> 15:18.320
+Tôi mong ông cân nhắc kỹ lại.
+
+15:19.400 --> 15:23.400
+Biết đâu ông cũng có thể trở thành
+người cứu vớt cuộc đời Hàn Tử Ngang.
+
+15:27.000 --> 15:29.960
+Cảnh sát Hà, cô xem thế này có được không.
+
+15:30.560 --> 15:32.960
+Dù sao Hàn Tử Ngang vẫn chưa tỉnh lại,
+
+15:33.040 --> 15:36.200
+vậy chúng tôi sẽ cố gắng
+trì hoãn chuyện cho thôi học này.
+
+15:36.800 --> 15:38.440
+Trước khi có kết quả,
+
+15:38.520 --> 15:40.360
+tôi thay mặt nhà trường nêu quan điểm,
+
+15:41.160 --> 15:44.320
+chỉ cần đến lúc đó
+phía cảnh sát các cô cấp giấy tờ
+
+15:44.400 --> 15:47.800
+chứng minh việc Hàn Tử Ngang
+làm người khác bị thương là vì tự vệ
+
+15:47.880 --> 15:50.360
+thì ta có thể trao đổi lại
+về chuyện thôi học.
+
+15:51.880 --> 15:53.720
+Vâng, cảm ơn ông.
+
+15:53.800 --> 15:55.520
+Cảm ơn Hiệu trưởng Tần, cảm ơn ông.
+
+16:06.760 --> 16:10.080
+Hiểu Hà lớn thế rồi
+mà vẫn bướng bỉnh như vậy.
+
+16:10.160 --> 16:13.720
+Gặp khó khăn
+lại ngậm đắng nuốt cay một mình.
+
+16:13.800 --> 16:17.560
+Thầy à,
+tính ra Hiểu Hà cũng là đàn em của em,
+
+16:17.640 --> 16:19.480
+cũng học điều tra hình sự sáu năm.
+
+16:19.560 --> 16:20.640
+Thầy phải tin nó chứ.
+
+16:21.320 --> 16:23.400
+Chẳng lẽ tôi lại không tin tưởng con mình?
+
+16:23.480 --> 16:25.360
+Dù sao tôi cũng là bố nó,
+
+16:26.840 --> 16:28.760
+cậu cũng là người chú biết nó từ bé.
+
+16:28.840 --> 16:30.800
+Đây là vụ án đầu tiên trong đời nó,
+
+16:30.880 --> 16:33.120
+vẫn phải dìu dắt nó thôi.
+
+16:35.320 --> 16:39.360
+Năm đó em nhận vụ án đầu tiên
+mà chẳng thấy thầy dìu dắt em gì cả.
+
+16:41.200 --> 16:42.240
+Vớ vẩn,
+
+16:42.320 --> 16:44.320
+lúc đó cậu chịu nhận tôi làm thầy hả?
+
+16:46.440 --> 16:49.120
+Thầy đúng là càng già càng thù dai.
+
+16:55.600 --> 16:57.960
+BUỔI VẬN ĐỘNG GIẢI TỎA NGUYÊN LONG LÝ
+
+16:58.040 --> 17:00.160
+TỔ CHỨC VÀO LÚC 1H00 CHIỀU NAY
+
+17:14.839 --> 17:16.599
+Sao lại niêm phong hết thế này?
+
+17:17.839 --> 17:20.280
+Phía bên kia không gặp sự cố,
+niêm phong gì chứ?
+
+17:20.359 --> 17:21.560
+Thầy à, ta đi thôi.
+
+17:21.640 --> 17:23.800
+CÔNG AN NAM SƠN, NGỤY DƯƠNG NIÊM PHONG
+
+17:25.800 --> 17:27.240
+Chắc ở đây chẳng còn gì để điều tra.
+
+17:28.000 --> 17:29.520
+Hay đến phòng theo dõi camera?
+
+17:30.720 --> 17:31.800
+Thầy à,
+
+17:32.320 --> 17:34.480
+phòng camera của nơi này bị dỡ bỏ lâu rồi.
+
+17:34.560 --> 17:35.480
+Thầy biết mà?
+
+17:36.640 --> 17:37.600
+À.
+
+17:38.920 --> 17:40.160
+Vậy thì xuống hầm để xe.
+
+17:40.800 --> 17:44.920
+Cậu không biết những năm qua
+hầm để xe đã ra nông nỗi nào đâu.
+
+17:45.000 --> 17:47.320
+Thầy à, chúng ta đi đi thì hơn,
+
+17:47.400 --> 17:48.920
+đừng xen vào vụ án này nữa.
+
+17:49.440 --> 17:50.760
+Có khi là trò chơi khăm thật.
+
+17:50.840 --> 17:53.600
+Thế 18 năm trước,
+mọi người đều bảo vụ của bố con Từ Manh
+
+17:53.680 --> 17:54.800
+cũng là trò chơi khăm mà.
+
+17:54.880 --> 17:56.240
+Khi ấy cậu đã làm gì?
+
+18:04.080 --> 18:06.720
+Thầy à, thầy nói thật đi.
+
+18:09.960 --> 18:14.280
+Thầy muốn giữ em ở lại Ngụy Dương,
+kéo em vào vụ án 18 năm trước chứ gì.
+
+18:21.760 --> 18:23.600
+Tiểu Kiều đang ở Nguyên Long Lý,
+
+18:24.120 --> 18:25.280
+cậu không muốn gặp sao?
+
+18:39.720 --> 18:40.880
+Cảnh sát Nhiễm.
+
+18:41.840 --> 18:42.880
+Tiểu Kiều.
+
+18:43.400 --> 18:45.000
+Ngại quá, lại đến làm phiền cô.
+
+18:47.840 --> 18:48.680
+Cô bé này là…
+
+18:48.760 --> 18:51.280
+Cháu chào cô ạ. Cháu tên là Hà Hiểu Hà.
+
+18:51.360 --> 18:55.480
+Bố cháu tên là Hà Viễn Hàng,
+là đồng nghiệp của chú Nhiễm ạ.
+
+18:56.440 --> 18:58.560
+Hiểu Hà, chào cháu.
+Cô tên là Kiều Tố Thanh.
+
+18:58.640 --> 18:59.560
+Rất vui được gặp cháu.
+
+19:02.000 --> 19:03.720
+Cô ơi, cô xinh thật đấy.
+
+19:03.800 --> 19:07.240
+Bảo sao chú Nhiễm lại đưa cháu đến đây.
+
+19:13.400 --> 19:15.200
+Nào, vào nhà đi.
+
+19:16.400 --> 19:17.680
+Mau lên, thay giày đi.
+
+19:40.320 --> 19:42.880
+Hiểu Hà, cháu xem muốn uống cái nào?
+
+19:42.960 --> 19:44.440
+- Cái này ạ.
+- Cái này à?
+
+19:45.680 --> 19:46.880
+Ừm… cảnh sát Nhiễm.
+
+19:47.600 --> 19:48.520
+Cảm ơn cô.
+
+19:49.280 --> 19:51.400
+- Cho cháu này.
+- Cháu cảm ơn cô ạ.
+
+19:55.800 --> 19:59.640
+Cô ơi, nhà cô sạch sẽ quá.
+Lại còn thơm nữa.
+
+20:00.440 --> 20:05.320
+Cảm ơn Hiểu Hà. Cô sống một mình,
+lúc rảnh rỗi thì thích dọn dẹp.
+
+20:05.400 --> 20:08.640
+Cô sống một mình ạ?
+Thế cô đã có bạn trai chưa?
+
+20:11.840 --> 20:12.680
+Chưa.
+
+20:13.640 --> 20:18.000
+Theo cháu biết,
+hình như chú Nhiễm cũng chưa có bạn gái.
+
+20:23.760 --> 20:28.200
+Hai người đừng cả nghĩ nhé,
+cháu chỉ đang nói sự thật thôi.
+
+20:36.760 --> 20:39.400
+Hiểu Hà, cháu tắm ở chỗ cô.
+
+20:39.480 --> 20:40.760
+Lát chú xuống đón nhé?
+
+20:40.840 --> 20:43.440
+Không được. Cháu phải
+thám hiểm mê cung với chú nữa.
+
+20:43.520 --> 20:44.600
+Phải nghe lời.
+
+20:44.680 --> 20:46.160
+Người ngợm cháu thế này,
+
+20:46.240 --> 20:47.880
+lát bố đến đón thì làm thế nào?
+
+20:51.080 --> 20:52.120
+Đi thôi.
+
+20:52.200 --> 20:54.840
+Hiểu Hà, cô đưa cháu đi tắm được không?
+
+20:55.920 --> 20:58.920
+Cảnh sát Nhiễm, anh cứ làm việc đi.
+Cứ giao Hiểu Hà cho tôi.
+
+20:59.000 --> 21:00.080
+Anh yên tâm đi.
+
+21:01.320 --> 21:02.160
+Cảm ơn cô.
+
+21:03.000 --> 21:04.800
+Chú Nhiễm, chú đỏ mặt kìa.
+
+21:07.040 --> 21:08.240
+Vậy hả?
+
+21:09.320 --> 21:11.120
+Đi nào, chúng ta đi tắm thôi.
+
+21:26.640 --> 21:30.080
+Cảnh sát Hà, sao lại thành ra thế này?
+
+21:30.160 --> 21:31.520
+Vụ án đó sắp phá được chưa?
+
+21:31.600 --> 21:34.440
+Tôi còn đang đợi
+lĩnh tiền thưởng cung cấp manh mối đây.
+
+21:35.280 --> 21:36.360
+Tôi cũng đang đợi đây.
+
+21:38.160 --> 21:40.240
+Cậu phải canh cậu thanh niên kia cho kỹ,
+
+21:40.320 --> 21:43.320
+đừng để cậu ấy sa ngã đấy nhé.
+
+21:43.840 --> 21:44.720
+Thanh niên nào?
+
+21:44.800 --> 21:45.960
+Cảnh sát Nhiễm ấy.
+
+21:46.480 --> 21:49.640
+Tôi thấy cậu ấy cứ rảnh rỗi
+là lại chạy sang nhà 415.
+
+21:49.720 --> 21:51.800
+Người sống ở đó là một cô bồ nhí đấy.
+
+21:52.560 --> 21:53.600
+Đừng nói lung tung.
+
+21:53.680 --> 21:54.840
+Tôi nói lung tung đâu.
+
+21:54.920 --> 21:57.320
+Ngay mới nãy,
+tôi thấy cậu ấy dắt một cô bé
+
+21:57.400 --> 21:59.440
+vào nhà cô bồ nhí kia.
+
+22:05.520 --> 22:08.120
+Ông Đỗ, tôi bảo này,
+nếu rảnh quá không có việc gì làm
+
+22:08.200 --> 22:09.800
+thì nghiên cứu truyện trinh thám
+
+22:09.880 --> 22:11.760
+xem các thám tử phá án thế nào đi.
+
+22:11.840 --> 22:14.280
+Chớ tọc mạch chuyện hàng xóm,
+khua môi múa mép.
+
+22:14.360 --> 22:15.640
+Không, chuyện này…
+
+22:17.480 --> 22:18.520
+Chính cậu bảo tôi
+
+22:18.600 --> 22:20.720
+tích cực cung cấp manh mối còn gì.
+
+22:21.560 --> 22:22.760
+Thật là.
+
+22:25.080 --> 22:26.800
+Nào, mau ăn đi cho nóng.
+
+22:26.880 --> 22:27.840
+Chà,
+
+22:28.520 --> 22:29.760
+cô Tiểu Kiều,
+
+22:29.840 --> 22:33.800
+cô đúng là hiện thân
+của Nàng Tiên Ốc trong phim hoạt hình.
+
+22:34.560 --> 22:36.160
+Miệng ngọt như mía lùi ấy nhỉ?
+
+22:36.240 --> 22:37.200
+Mau ăn đi.
+
+22:41.880 --> 22:42.960
+Ôi…
+
+22:43.600 --> 22:44.560
+Sao thế?
+
+22:45.520 --> 22:48.720
+Sau này nếu cháu có thể gọi cô là thím
+thì tốt biết mấy.
+
+22:49.880 --> 22:51.640
+Bé tí mà lanh ghê.
+
+22:52.280 --> 22:55.200
+Cô chưa từng có ý nghĩ quá trớn nào
+với chú Nhiễm của cháu.
+
+22:56.080 --> 22:56.920
+Không phải chứ?
+
+22:57.600 --> 22:59.040
+Cô nói thật mà.
+
+22:59.120 --> 23:01.720
+Ý cháu là vừa nãy
+cháu chỉ mới nói mỗi từ "thím" thôi,
+
+23:01.800 --> 23:04.400
+sao cô đã nghĩ ngay đến chú Nhiễm rồi?
+
+23:06.240 --> 23:07.240
+Cháu được lắm.
+
+23:09.920 --> 23:10.920
+Tôi ra đây.
+
+23:13.040 --> 23:15.800
+Cô nôn nóng muốn gặp chú ấy đến vậy sao?
+
+23:21.320 --> 23:22.160
+Cho hỏi…
+
+23:22.240 --> 23:23.120
+Bố ạ.
+
+23:24.720 --> 23:26.040
+Con gái.
+
+23:26.120 --> 23:28.640
+Cảnh sát Hà đúng không?
+Mời vào, mau vào đi.
+
+23:28.720 --> 23:30.600
+Người tôi toàn đất cát, không vào đâu.
+
+23:30.680 --> 23:32.400
+- Tôi đến đón con bé.
+- Không sao.
+
+23:32.480 --> 23:36.280
+Bố, con vừa chui vào chuồng gà đấy.
+Chắc bố không chui vào chuồng lợn đâu nhỉ?
+
+23:36.360 --> 23:38.960
+Bố không chui vào chuồng lợn,
+nhưng lại bị lợn húc.
+
+23:39.840 --> 23:41.360
+Cảnh sát Hà, vào ngồi đi.
+
+23:41.440 --> 23:42.440
+Để tôi lấy khăn.
+
+23:43.360 --> 23:44.480
+Ngại quá.
+
+23:49.280 --> 23:51.600
+Sao con còn tắm nữa vậy? Chú Nhiễm đâu?
+
+23:51.680 --> 23:54.600
+Chú Nhiễm đang
+giải bài toán mê cung ở tầng 18 rồi.
+
+23:54.680 --> 23:57.200
+Dầu gội đầu nhà cô Tiểu Kiều
+thơm lắm luôn.
+
+23:57.280 --> 23:58.640
+Mì trứng cô ấy làm cũng ngon.
+
+23:58.720 --> 24:02.120
+Bố ơi, bố mau cảm ơn người ta đi.
+Xem cô ấy chăm sóc con tốt chưa này.
+
+24:04.520 --> 24:06.200
+Đây, cảnh sát Hà, lau đất cát đi.
+
+24:06.280 --> 24:07.240
+Được, cảm ơn cô.
+
+24:07.320 --> 24:09.000
+Con bé làm phiền cô rồi.
+
+24:09.080 --> 24:11.640
+Không phiền đâu, Hiểu Hà ngoan lắm.
+
+24:12.480 --> 24:13.480
+Cảnh sát Hà ngồi đi.
+
+24:13.560 --> 24:16.520
+Thôi, tôi… lau sơ qua là được rồi.
+
+24:19.440 --> 24:21.800
+Bố ơi, con thích cô Tiểu Kiều lắm.
+
+24:21.880 --> 24:24.920
+Sau này bố bảo chú Nhiễm
+thường xuyên đưa con đến đây nhé!
+
+24:28.440 --> 24:30.960
+Đi giúp cô giặt sạch khăn đi.
+
+24:49.320 --> 24:50.280
+Cảm ơn cô.
+
+24:54.320 --> 24:55.240
+Cảnh sát Hà,
+
+24:55.840 --> 24:59.200
+tôi… biết mình mang tiếng xấu,
+
+24:59.720 --> 25:02.640
+tôi không nên qua lại với cảnh sát Nhiễm.
+
+25:05.840 --> 25:10.200
+Nhưng mà tôi thật sự
+không như những gì họ đồn đại đâu.
+
+25:15.120 --> 25:17.160
+Tôi chỉ tin vào những gì mắt mình thấy.
+
+25:17.240 --> 25:20.240
+Cô đừng để tâm quá đến
+những lời đồn bên ngoài.
+
+25:20.960 --> 25:22.720
+Chỉ cần sống ngay thẳng
+
+25:22.800 --> 25:26.040
+thì không cần lo lắng miệng đời xuyên tạc.
+
+25:37.680 --> 25:40.520
+MAU ĐẾN ĐỐI DIỆN TIỆM MÁT-XA CHÂN. LILY.
+
+25:44.960 --> 25:48.360
+Cảnh sát Hà muốn gọi điện thoại à?
+Dùng máy nhà tôi này.
+
+25:49.240 --> 25:50.080
+Không cần đâu.
+
+25:50.960 --> 25:54.120
+Tôi có thể phiền cô
+giúp tôi trông con thêm một lát nữa không?
+
+25:54.200 --> 25:55.680
+Chắc lát nữa tôi mới đón nó được.
+
+25:55.760 --> 25:56.960
+Được ạ, không phiền đâu.
+
+25:57.040 --> 25:59.800
+Hiểu Hà ở đây với tôi,
+tôi mừng còn không hết ấy chứ.
+
+26:00.640 --> 26:02.160
+Con cũng mừng lắm luôn.
+
+26:03.080 --> 26:05.360
+Cái con bé này. Phải nghe lời cô nhé.
+
+26:06.440 --> 26:07.880
+Vậy cảm ơn cô nhé.
+
+26:13.560 --> 26:17.440
+CHỢ ĐỒ CŨ
+
+26:37.760 --> 26:40.560
+TÁM GIỜ TỐI GẶP Ở CHỖ CŨ.
+
+26:53.680 --> 26:56.920
+Hai người định làm gì?
+Xuống nhìn lại biển số xe đi.
+
+26:57.440 --> 27:00.280
+Ông đây là phó giám đốc
+của nhà máy xi măng Thanh Tùng,
+
+27:00.920 --> 27:03.720
+không phải loại hạng tép riu bọn mày
+có thể động đến đâu.
+
+27:07.000 --> 27:09.320
+- Tôi đang tìm cậu đấy thằng ranh.
+- Làm gì vậy?
+
+27:09.400 --> 27:12.640
+Tôi có một thằng em,
+biệt danh là Sói Xám Con.
+
+27:12.720 --> 27:16.160
+Mấy ngày trước bị cảnh sát bắt rồi.
+Cậu biết chuyện là thế nào không?
+
+27:16.240 --> 27:17.080
+Không biết.
+
+27:19.480 --> 27:20.880
+Biết hay không?
+
+27:20.960 --> 27:23.080
+Biết.
+
+27:25.680 --> 27:26.520
+Biết.
+
+27:28.160 --> 27:29.320
+Em trai anh không giết người.
+
+27:29.400 --> 27:30.640
+Đừng chủ động khai ra.
+
+27:32.320 --> 27:34.200
+Tôi hỏi câu nào thì trả lời câu đấy.
+
+27:35.000 --> 27:35.840
+Được.
+
+27:36.560 --> 27:39.120
+Có phải Tống Thanh Tùng chi tiền không?
+
+27:40.000 --> 27:42.080
+Không phải, là tôi chi tiền.
+
+27:42.960 --> 27:44.720
+Tôi lấy mạng ra thề, tôi chi tiền.
+
+27:45.320 --> 27:46.560
+Lỡ việc chuyển đổi kinh doanh của ông!
+
+27:48.120 --> 27:51.400
+Cậu là người thuê thì thanh toán nốt đi.
+
+27:52.160 --> 27:53.240
+Thanh toán nốt gì cơ?
+
+27:53.320 --> 27:56.800
+Em trai anh chưa làm xong việc,
+sao dám đòi thanh toán nốt?
+
+27:58.160 --> 27:59.600
+Tại sao ấy hả?
+
+28:01.480 --> 28:02.960
+Tôi bảo cậu ra tay chưa?
+
+28:03.040 --> 28:06.280
+Có gì anh cứ từ từ nói.
+Có thể chuyên nghiệp một chút không?
+
+28:09.000 --> 28:13.240
+Cậu em này của tôi
+là trụ cột kinh doanh của công ty.
+
+28:13.760 --> 28:17.520
+Vì cậu mà nó bị cảnh sát bắt,
+đến giờ vẫn chưa được thả ra.
+
+28:18.280 --> 28:21.000
+Phải tính toán chi phí tổn thất chứ nhỉ?
+
+28:21.080 --> 28:22.600
+Chi phí tổn thất?
+
+28:23.120 --> 28:26.840
+Em trai anh còn chưa làm xong việc,
+tôi phải đi xử lý nốt cho anh ta,
+
+28:26.920 --> 28:29.000
+vất vả lắm mới xử xong hai bố con nhà kia.
+
+28:30.120 --> 28:31.640
+Cậu xử lý hai bố con nhà đó à?
+
+28:32.840 --> 28:33.680
+Ừ.
+
+28:35.720 --> 28:38.280
+Ngạc nhiên đấy,
+ranh con mà cũng gớm ra trò.
+
+28:38.360 --> 28:39.880
+Mỗi người một nhát.
+
+28:41.120 --> 28:42.280
+Khá đấy.
+
+28:42.360 --> 28:44.600
+Chi phí tổn thất tính thế nào đây?
+
+28:48.560 --> 28:49.760
+Dễ thôi,
+
+28:51.680 --> 28:54.120
+rất công bằng sòng phẳng.
+
+28:55.000 --> 28:56.760
+Cậu đứng thứ hai ở nhà máy xi măng mà.
+
+28:58.120 --> 28:59.200
+Làm quan to như thế,
+
+28:59.920 --> 29:03.600
+ký với ông đây
+một hợp đồng giao khoán 300.000 tệ đi.
+
+29:03.680 --> 29:05.560
+Cậu bên A, tôi bên B,
+
+29:06.160 --> 29:07.000
+ổn chứ?
+
+29:07.840 --> 29:09.880
+Hay là cứ thanh toán nốt tiền đi…
+
+29:14.520 --> 29:16.480
+- Ký không?
+- Ký.
+
+29:16.560 --> 29:18.040
+Ký.
+
+29:24.160 --> 29:28.120
+Làm ăn với sếp Ngô đúng là dễ chịu.
+
+29:35.080 --> 29:35.920
+HỢP ĐỒNG GIAO KHOÁN NHÂN CÔNG
+
+29:36.000 --> 29:37.320
+BÊN A: NGÔ SƠN LONG, BÊN B: KIM MÃN SƠN
+
+29:40.360 --> 29:42.920
+Sắp xếp người đi báo tin cho Mãn Lang.
+
+29:43.440 --> 29:44.280
+Vâng.
+
+29:47.600 --> 29:48.640
+Nói đi.
+
+29:49.560 --> 29:52.960
+Bình thường chị Triệu không cho bọn tôi
+nói về chuyện của Mộng Mộng.
+
+29:53.040 --> 29:55.640
+Mấy chị em chúng tôi
+toàn lén nói chuyện với nhau.
+
+29:56.200 --> 29:58.760
+Họ đều cảm thấy có một vị khách
+rất có vấn đề.
+
+30:00.320 --> 30:01.720
+Vị khách nào?
+
+30:02.240 --> 30:04.640
+Lần nào người này đến
+cũng chỉ gọi Mộng Mộng.
+
+30:04.720 --> 30:06.480
+Hơn nữa còn trả giá gấp đôi.
+
+30:06.560 --> 30:08.080
+Bọn tôi gọi đó là ông chủ Tôn.
+
+30:08.160 --> 30:09.240
+Ông chủ Tôn?
+
+30:09.880 --> 30:12.760
+Hồi trước ở Batiya,
+ông chủ Tôn thường xuyên đến.
+
+30:12.840 --> 30:15.720
+Còn hay xách theo
+túi đựng quần áo hàng hiệu.
+
+30:15.800 --> 30:18.120
+Mấy nhãn hiệu bên trong đều đắt lắm.
+
+30:19.440 --> 30:20.880
+Quần áo hàng hiệu.
+
+30:22.160 --> 30:23.400
+Hãng Song Ngư.
+
+30:23.920 --> 30:25.160
+Không rẻ đâu nhé.
+
+30:26.480 --> 30:27.480
+Bowls.
+
+30:28.440 --> 30:31.440
+Cái váy này
+chắc còn đắt hơn căn nhà này đấy.
+
+30:35.400 --> 30:38.360
+Đồ hiệu ông chủ Tôn tặng
+có hãng Bowls và Song Ngư không?
+
+30:39.560 --> 30:42.040
+Bowls với Song Ngư?
+
+30:43.800 --> 30:45.200
+Tôi thật sự không nhớ nổi.
+
+30:47.160 --> 30:48.880
+Thế tên thật của ông chủ Tôn là gì?
+
+30:49.880 --> 30:50.800
+Không rõ nữa.
+
+30:53.160 --> 30:56.640
+Nhưng sau khi Mộng Mộng mất tích,
+ông chủ Tôn cũng không đến nữa.
+
+31:03.200 --> 31:04.280
+Hai anh cảnh sát,
+
+31:04.800 --> 31:07.600
+tôi đã nói hết những chuyện tôi biết
+với hai người rồi.
+
+31:07.680 --> 31:10.240
+Tôi mong hai người có thể
+mau tìm thấy Mộng Mộng.
+
+31:10.320 --> 31:11.800
+Tôi vẫn lo cho cô ấy lắm.
+
+31:13.000 --> 31:15.200
+Yên tâm đi, chúng tôi vẫn đang tìm kiếm.
+
+31:15.280 --> 31:16.600
+Manh mối của cô rất quan trọng.
+
+31:16.680 --> 31:18.360
+Cảm ơn cô, Lily.
+
+31:18.440 --> 31:21.400
+Nếu không có việc gì nữa
+thì tôi đi trước đây.
+
+31:23.800 --> 31:24.680
+GHÉ NHÀ CẬU CỦA TỪ MANH
+
+31:24.760 --> 31:26.160
+DẤU VẾT DỊCH CHUYỂN
+TRÊN MẶT SÀN NGAY CHÂN GIƯỜNG
+
+31:28.760 --> 31:29.720
+Đúng rồi,
+
+31:29.800 --> 31:32.480
+hồi còn ở Batiya
+có một chị tên là Chi Chi,
+
+31:32.560 --> 31:34.400
+chị ấy rất thân với ông chủ Tôn.
+
+31:34.480 --> 31:36.120
+Hai người có thể đi tìm chị ấy.
+
+31:42.720 --> 31:44.040
+Chi Chi?
+
+31:45.880 --> 31:47.040
+Tô Ngọc Chi.
+
+31:49.280 --> 31:50.880
+Sếp lớn? Tên gì?
+
+31:50.960 --> 31:52.880
+Hình như họ Tôn.
+
+31:52.960 --> 31:56.360
+Tên thì không biết.
+
+32:00.360 --> 32:01.960
+Tô Ngọc Chi đã nói dối.
+
+32:28.960 --> 32:30.600
+"Ôn thi đại học cho người trưởng thành"?
+
+32:32.200 --> 32:34.440
+Thi cử vốn là việc
+của học sinh bọn cháu mà,
+
+32:34.520 --> 32:36.920
+sao người lớn còn phải thi ạ?
+
+32:37.600 --> 32:39.360
+Đây là kỳ thi đại học
+cho người trưởng thành.
+
+32:39.440 --> 32:42.040
+Kỳ thi này giúp những người
+chưa học cấp Ba như cô
+
+32:42.120 --> 32:43.840
+có cơ hội để được học đại học.
+
+32:43.920 --> 32:46.960
+Cháu hiểu rồi.
+Cô định học chú Nhiễm chứ gì.
+
+32:48.080 --> 32:50.120
+Nhóc lanh này lại trêu cô rồi.
+
+32:51.400 --> 32:54.640
+Cảnh sát Nhiễm là sinh viên ưu tú
+của trường đại học danh tiếng.
+
+32:55.480 --> 32:59.640
+Còn cô,
+sau khi tốt nghiệp cấp Hai đã đi làm,
+
+33:01.160 --> 33:03.040
+nên chỉ có thể làm
+
+33:04.360 --> 33:06.280
+công việc chân tay chăm sóc người khác.
+
+33:06.360 --> 33:09.520
+Vì vậy cô mới muốn học hỏi thêm,
+
+33:09.600 --> 33:12.800
+để mai này thi lấy tấm bằng,
+kiếm được công việc tốt hơn.
+
+33:13.400 --> 33:16.200
+- Cháu phục cô quá!
+- Vì sao cháu lại phục cô?
+
+33:16.280 --> 33:18.920
+Bởi vì cô là cô Tiểu Kiều chăm chỉ mà.
+
+33:19.000 --> 33:21.400
+Mẹ cháu từng bảo
+con người chỉ cần chăm chỉ
+
+33:21.480 --> 33:23.320
+thì ước mơ nào cũng thành hiện thực.
+
+33:24.600 --> 33:26.000
+Mẹ cháu nói rất đúng.
+
+33:30.480 --> 33:32.320
+Cháu cũng phải chăm chỉ học tập.
+
+33:36.400 --> 33:39.240
+- Cháu có hiểu không?
+- Không hiểu thì mới phải học chứ ạ.
+
+33:39.320 --> 33:42.520
+Cháu muốn giống như chú Nhiễm,
+sau này trở thành sinh viên ưu tú.
+
+33:43.680 --> 33:45.560
+Vậy hai chúng ta ngoéo tay nhé.
+
+33:45.640 --> 33:48.120
+Hứa nhé, mai này
+đều phải thành sinh viên ưu tú.
+
+33:48.200 --> 33:49.320
+Vâng ạ.
+
+33:50.600 --> 33:54.200
+Ngoéo tay thề,
+không bao giờ được thay đổi.
+
+33:59.480 --> 34:04.480
+TRANG PHỤC CAO CẤP NGỌC CHI
+
+34:15.639 --> 34:18.320
+Đều là mẫu mới nhất đấy,
+chọn thoải mái nhé.
+
+34:28.199 --> 34:29.239
+Ừm…
+
+34:34.280 --> 34:36.880
+Anh đẹp trai, cuối cùng anh cũng đến rồi.
+
+34:36.960 --> 34:38.600
+Định mời tôi đi ăn lẩu à?
+
+34:39.400 --> 34:40.520
+Không phải,
+
+34:41.199 --> 34:44.080
+bọn tôi đến
+hỏi cô về chuyện của ông chủ Tôn.
+
+34:44.600 --> 34:47.400
+Cô nói dối
+là không biết rõ về người này đúng không?
+
+34:49.360 --> 34:52.120
+Nếu tôi không nói dối
+thì anh có chịu đến tìm tôi không?
+
+34:54.440 --> 34:55.440
+Lại là bẫy tình ái.
+
+34:56.040 --> 34:58.880
+Tô Ngọc Chi, đã đưa cậu ấy đến cho cô rồi,
+
+34:58.960 --> 35:01.160
+lần này cô phải nói thật đấy nhé.
+
+35:01.240 --> 35:04.240
+Anh đẹp trai,
+anh muốn nghe lời thật lòng nào đây?
+
+35:07.600 --> 35:09.960
+Tôi muốn hỏi cô ông chủ Tôn là ai?
+
+35:11.920 --> 35:15.440
+Ông Tôn ấy à, tên thật là Tôn Chính Dũng,
+
+35:15.520 --> 35:16.640
+người Phúc Kiến.
+
+35:16.720 --> 35:19.240
+Cửa hàng quần áo này của tôi
+có cổ phần của ông ấy.
+
+35:19.320 --> 35:22.720
+Đừng nghĩ lung tung nhé,
+chúng tôi không phải quan hệ kiểu đó đâu.
+
+35:22.800 --> 35:24.880
+Vậy ông ta và Từ Manh có quan hệ gì?
+
+35:28.200 --> 35:31.240
+Nếu tôi nói thật,
+sau này anh còn đến tìm tôi nữa không?
+
+35:33.920 --> 35:35.680
+Đề nghị cô trả lời đúng câu hỏi.
+
+35:40.960 --> 35:43.080
+Cái váy này là Tôn Chính Dũng tặng cô à?
+
+35:43.160 --> 35:44.640
+Đừng nói bừa nhé.
+
+35:47.960 --> 35:50.600
+Tôi nhập sỉ từ chỗ ông ấy về đấy.
+
+35:54.520 --> 35:55.800
+THỜI TRANG THỜI THƯỢNG
+
+35:57.560 --> 35:59.560
+Đây là hàng nhái?
+
+35:59.640 --> 36:02.040
+Hàng nhái mới bán chạy chứ.
+
+36:02.120 --> 36:03.120
+Vậy là
+
+36:03.200 --> 36:05.080
+Tôn Chính Dũng sẽ mua hàng xịn trước,
+
+36:05.160 --> 36:07.080
+sau đó đem đi làm mẫu nhái để bán sỉ.
+
+36:07.680 --> 36:09.200
+Anh đẹp trai thông minh đấy.
+
+36:09.280 --> 36:11.680
+Thế mà anh cũng nghĩ ra được.
+
+36:16.480 --> 36:18.000
+Vậy hàng xịn xử lý thế nào?
+
+36:18.080 --> 36:21.880
+Thường thì ông chủ Tôn sẽ tặng cho
+những cô gái mà ông ấy thích.
+
+36:22.600 --> 36:24.520
+Tặng cho Từ Manh?
+
+36:24.600 --> 36:25.840
+Chắc vậy.
+
+36:25.920 --> 36:27.280
+Ông ấy mê Mộng Mộng nhất.
+
+36:27.360 --> 36:29.160
+Anh nghi chuyện Mộng Mộng mất tích
+
+36:29.240 --> 36:30.720
+liên quan đến ông chủ Tôn à?
+
+36:31.520 --> 36:32.440
+Cô thấy thế nào?
+
+36:33.640 --> 36:34.800
+Không rõ nữa.
+
+36:36.440 --> 36:39.560
+Tôi từng thấy họ cãi nhau một lần.
+
+36:40.160 --> 36:41.400
+Vào lúc nào? Ở đâu?
+
+36:41.480 --> 36:43.200
+Ở Batiya chứ đâu.
+
+36:43.280 --> 36:48.000
+Ông chủ Tôn uống say, cứ ôm lấy Mộng Mộng,
+bảo là muốn hẹn hò với cô ấy.
+
+36:48.080 --> 36:50.800
+Mộng Mộng không đồng ý,
+thế là ông chủ Tôn nổi cáu,
+
+36:50.880 --> 36:53.040
+bảo Mộng Mộng vờ thanh cao,
+coi thường ông ấy.
+
+36:53.120 --> 36:54.480
+Thế là cãi nhau thôi.
+
+36:59.640 --> 37:01.440
+- Sau đó thì sao?
+- Sau đó?
+
+37:02.440 --> 37:04.360
+Batiya bị anh tra xét rồi niêm phong.
+
+37:09.120 --> 37:12.600
+Thế hàng chính hãng của Bowls
+có bán ở Ngụy Dương không?
+
+37:12.680 --> 37:14.880
+Người ta là thương hiệu lớn,
+
+37:14.960 --> 37:16.760
+Ngụy Dương có một cửa hàng chính hãng
+
+37:16.840 --> 37:18.280
+trong Bách hóa Ngụy Dương ấy.
+
+37:18.360 --> 37:21.680
+Cô có thể cung cấp địa chỉ cửa hàng bán sỉ
+của Tôn Chính Dũng không?
+
+37:31.760 --> 37:33.000
+THỜI TRANG ANH DŨNG
+
+37:33.080 --> 37:33.920
+ĐỊA CHỈ: CHỢ BÁN SỈ
+
+37:35.920 --> 37:37.120
+Đúng rồi.
+
+37:41.720 --> 37:43.360
+Bất ngờ tôi hứa tặng anh đây.
+
+37:44.880 --> 37:46.560
+Chúng tôi không được phép…
+
+37:47.080 --> 37:48.600
+Biết rồi.
+
+37:49.480 --> 37:51.040
+Tính giá nhập cho anh.
+
+37:51.920 --> 37:53.160
+Năm tệ.
+
+37:57.240 --> 37:58.160
+Cầm lấy đi.
+
+37:59.120 --> 38:01.480
+Cậu không nhận,
+cô ấy lại giăng bẫy tình ái đấy.
+
+38:10.640 --> 38:12.440
+Cảm ơn cô, Tô Ngọc Chi.
+
+38:12.960 --> 38:14.760
+Chúc cô buôn may bán đắt.
+
+38:20.720 --> 38:21.800
+Tạm biệt.
+
+38:29.040 --> 38:30.120
+Hay thay vào trước đi?
+
+38:35.840 --> 38:36.680
+Anh Hà,
+
+38:37.560 --> 38:39.960
+tôi thấy lần này Tô Ngọc Chi nói thật đấy.
+
+38:40.560 --> 38:41.840
+Khá đáng tin.
+
+38:41.920 --> 38:43.680
+Người ta hết lòng hết dạ với cậu còn gì.
+
+38:43.760 --> 38:46.520
+Anh Hà, đang điều tra vụ án,
+anh nghiêm túc một chút đi.
+
+38:47.720 --> 38:48.800
+Được,
+
+38:48.880 --> 38:51.120
+vậy hãy nghiêm túc phân tích một chút.
+
+38:51.720 --> 38:54.800
+Liệu Tôn Chính Dũng
+có thấy Từ Manh coi thường mình…
+
+38:55.920 --> 38:58.560
+Rồi từ yêu sinh hận, nảy ý giết người?
+
+39:02.360 --> 39:03.360
+TRANG PHỤC CAO CẤP NGỌC CHI
+
+39:05.560 --> 39:06.920
+THỜI TRANG ANH DŨNG
+
+39:07.000 --> 39:08.840
+Tôi sẽ đến cửa hàng gặp tên này xem.
+
+39:08.920 --> 39:10.480
+Vậy tôi đến cửa hàng của Bowls,
+
+39:10.560 --> 39:12.240
+kiểm tra hóa đơn mua váy.
+
+39:13.200 --> 39:14.440
+Được đấy,
+
+39:14.520 --> 39:16.040
+học được cách chặn đầu chặn đuôi từ tôi,
+
+39:16.640 --> 39:17.840
+có tiến bộ.
+
+39:20.800 --> 39:23.680
+Còn nữa, đầu mối về Tống Thanh Tùng
+cũng không được bỏ qua.
+
+39:23.760 --> 39:25.640
+Đừng vội, điều tra từng cái một.
+
+40:04.480 --> 40:05.320
+Đầu anh sao thế?
+
+40:05.920 --> 40:08.280
+Có chuyện gì
+không thể nói qua điện thoại à?
+
+40:09.600 --> 40:11.120
+Theo anh là chuyện gì?
+
+40:12.120 --> 40:13.160
+Chuyện của anh Tống thì thôi.
+
+40:15.200 --> 40:16.360
+Thôi à?
+
+40:17.160 --> 40:19.720
+Ngô Sơn Long, anh đang đùa với tôi đấy hả?
+
+40:20.320 --> 40:23.280
+Hai lần lên kế hoạch,
+lần nào cô cũng nói là không một sơ hở,
+
+40:23.360 --> 40:24.640
+kết quả thì sao?
+
+40:27.240 --> 40:29.560
+Nói cứ như thể là
+chuyện của một mình tôi vậy.
+
+40:29.640 --> 40:31.280
+Ngay từ đầu là anh tìm tôi,
+
+40:31.360 --> 40:33.760
+gạ bắt tay với nhau
+để lừa tiền của anh Tống.
+
+40:36.080 --> 40:37.400
+Tôi không còn tâm trí
+nghĩ đến tiền của anh ta nữa.
+
+40:38.440 --> 40:42.240
+Bản thân anh có tin nổi
+những lời anh thốt ra không?
+
+40:43.800 --> 40:45.120
+Cảnh sát để ý đến Mộng Mộng rồi.
+
+40:46.320 --> 40:47.840
+Tống Thanh Tùng bảo tôi nhận tội thay.
+
+40:51.800 --> 40:55.840
+Thế nếu anh mà vào tù,
+lúc cảnh sát thẩm vấn,
+
+40:55.920 --> 40:57.840
+liệu anh có khai tôi ra không?
+
+41:04.880 --> 41:05.720
+Quả nhiên là
+
+41:05.800 --> 41:09.280
+đàn ông mà đáng tin
+thì lợn sề cũng biết leo cây.
+
+41:11.000 --> 41:12.720
+Tôi cũng bị ép thôi.
+
+41:12.800 --> 41:14.400
+Cô còn kế hoạch nào không?
+
+41:14.480 --> 41:16.680
+Anh bảo kế hoạch của tôi vô dụng còn gì?
+
+41:16.760 --> 41:17.640
+Triệu Hồng Mai,
+
+41:17.720 --> 41:19.800
+cô đừng quên hai chúng ta cùng thuyền đấy.
+
+41:24.200 --> 41:25.800
+Đâm lao thì phải theo lao thôi.
+
+41:25.880 --> 41:27.880
+Rồi cũng phải thành công.
+
+41:29.000 --> 41:30.200
+Ngô Sơn Long,
+
+41:32.400 --> 41:34.320
+tôi muốn nghe một câu thật lòng,
+
+41:34.840 --> 41:36.200
+bằng không thì miễn bàn.
+
+41:36.840 --> 41:37.920
+Rốt cuộc Mộng Mộng
+
+41:39.880 --> 41:42.040
+đã chết chưa?
+
+41:44.080 --> 41:45.280
+Mộng Mộng chết rồi.
+
+41:46.480 --> 41:47.800
+Mộng Mộng chết hẳn rồi!
+
+41:50.560 --> 41:52.360
+Khốn kiếp!
