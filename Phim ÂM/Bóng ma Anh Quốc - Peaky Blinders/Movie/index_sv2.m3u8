@@ -1,5 +1,7 @@
 #EXTM3U
 #EXT-X-VERSION:3
+#EXT-X-TARGETDURATION:10
+#EXT-X-MEDIA-SEQUENCE:0
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="UNKNOWN",LANGUAGE="unknown",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20%C3%82M/B%C3%B3ng%20ma%20Anh%20Qu%E1%BB%91c%20-%20Peaky%20Blinders/Movie/bong-ma_ara_2.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="UNKNOWN",LANGUAGE="unknown",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20%C3%82M/B%C3%B3ng%20ma%20Anh%20Qu%E1%BB%91c%20-%20Peaky%20Blinders/Movie/bong-ma_baq_11.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="UNKNOWN",LANGUAGE="unknown",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20%C3%82M/B%C3%B3ng%20ma%20Anh%20Qu%E1%BB%91c%20-%20Peaky%20Blinders/Movie/bong-ma_bul_3.vtt"
@@ -36,8 +38,6 @@
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Ukrainian",LANGUAGE="uk",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20%C3%82M/B%C3%B3ng%20ma%20Anh%20Qu%E1%BB%91c%20-%20Peaky%20Blinders/Movie/bong-ma_ukr_34.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Vietnamese",LANGUAGE="vi",DEFAULT=YES,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20%C3%82M/B%C3%B3ng%20ma%20Anh%20Qu%E1%BB%91c%20-%20Peaky%20Blinders/Movie/bong-ma_vie_35.vtt"
 #EXT-X-PLAYLIST-TYPE:VOD
-#EXT-X-TARGETDURATION:10
-#EXT-X-MEDIA-SEQUENCE:0
 #EXTINF:5.041000,
 http://s3-eu-west-1.amazonaws.com/lecturequizuploads/ee9461c3-7eef-4fbf-bd84-08b86d8b2d45|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/4a6aabd3-be14-4027-bdd9-5a684c477465
 #EXTINF:4.999000,

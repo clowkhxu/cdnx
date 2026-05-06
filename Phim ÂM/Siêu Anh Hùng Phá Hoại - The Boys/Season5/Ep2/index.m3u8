@@ -1,10 +1,10 @@
 #EXTM3U
 #EXT-X-VERSION:3
+#EXT-X-TARGETDURATION:10
+#EXT-X-MEDIA-SEQUENCE:0
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",LANGUAGE="en",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20%C3%82M/Si%C3%AAu%20Anh%20H%C3%B9ng%20Ph%C3%A1%20Ho%E1%BA%A1i%20-%20The%20Boys/Season5/Ep2/ep2_eng_1.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Vietnamese",LANGUAGE="vi",DEFAULT=YES,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20%C3%82M/Si%C3%AAu%20Anh%20H%C3%B9ng%20Ph%C3%A1%20Ho%E1%BA%A1i%20-%20The%20Boys/Season5/Ep2/ep2_vie_39.vtt"
 #EXT-X-PLAYLIST-TYPE:VOD
-#EXT-X-TARGETDURATION:10
-#EXT-X-MEDIA-SEQUENCE:0
 #EXTINF:6.088000,
 https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/263fbb0e5286a2905ead12f136e468a3|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/1d6581c3135fb7de782996917b297eb5|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/3031693e1b5edf9ae431ac1515ae0d99
 #EXTINF:4.003000,

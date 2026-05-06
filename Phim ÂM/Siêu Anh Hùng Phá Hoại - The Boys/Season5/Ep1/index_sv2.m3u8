@@ -1,10 +1,10 @@
 #EXTM3U
 #EXT-X-VERSION:3
+#EXT-X-TARGETDURATION:10
+#EXT-X-MEDIA-SEQUENCE:0
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",LANGUAGE="en",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20%C3%82M/Si%C3%AAu%20Anh%20H%C3%B9ng%20Ph%C3%A1%20Ho%E1%BA%A1i%20-%20The%20Boys/Season5/Ep1/ep1_eng_1.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Vietnamese",LANGUAGE="vi",DEFAULT=YES,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20%C3%82M/Si%C3%AAu%20Anh%20H%C3%B9ng%20Ph%C3%A1%20Ho%E1%BA%A1i%20-%20The%20Boys/Season5/Ep1/ep1_vie_38.vtt"
 #EXT-X-PLAYLIST-TYPE:VOD
-#EXT-X-TARGETDURATION:10
-#EXT-X-MEDIA-SEQUENCE:0
 #EXTINF:6.088000,
 http://s3-eu-west-1.amazonaws.com/lecturequizuploads/4d030f84-dd4f-4ad9-a23d-459d1f6a00af|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/481f2696-809d-4c81-8093-8662fa0e437e|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/9592aaa7-8ab0-4bfc-8077-0c8b636c2cf3
 #EXTINF:4.003000,

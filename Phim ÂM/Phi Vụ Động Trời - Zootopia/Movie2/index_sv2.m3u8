@@ -1,12 +1,12 @@
 #EXTM3U
 #EXT-X-VERSION:3
+#EXT-X-TARGETDURATION:10
+#EXT-X-MEDIA-SEQUENCE:0
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",LANGUAGE="en",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20%C3%82M/Phi%20V%E1%BB%A5%20%C4%90%E1%BB%99ng%20Tr%E1%BB%9Di%20-%20Zootopia/Movie2/zootopia_2_eng_2.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Russian",LANGUAGE="ru",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20%C3%82M/Phi%20V%E1%BB%A5%20%C4%90%E1%BB%99ng%20Tr%E1%BB%9Di%20-%20Zootopia/Movie2/zootopia_2_rus_0.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Russian",LANGUAGE="ru",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20%C3%82M/Phi%20V%E1%BB%A5%20%C4%90%E1%BB%99ng%20Tr%E1%BB%9Di%20-%20Zootopia/Movie2/zootopia_2_rus_1.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Vietnamese",LANGUAGE="vi",DEFAULT=YES,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20%C3%82M/Phi%20V%E1%BB%A5%20%C4%90%E1%BB%99ng%20Tr%E1%BB%9Di%20-%20Zootopia/Movie2/zootopia_2_vie_1.vtt"
 #EXT-X-PLAYLIST-TYPE:VOD
-#EXT-X-TARGETDURATION:10
-#EXT-X-MEDIA-SEQUENCE:0
 #EXTINF:6.082000,
 http://s3-eu-west-1.amazonaws.com/lecturequizuploads/bef3f6a7-61da-4ed7-ae9c-461a23e4ed9b|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/0458e3fe-d33b-4c61-89b1-06db2e51b671|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/97d43256-46ef-495e-a8b1-c2520f53fb3c|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/c577ab40-2327-4e2d-9e56-800141005b88|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/87a98a5d-489d-480a-ac79-6c84a3cf47e8|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/7e602d47-7932-4119-9bfc-943c818fa206|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/9011de64-1dc8-4173-8e42-ed68a7ecb84c|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/92df2ea6-49e8-483d-bfdb-5c2e82032181
 #EXTINF:3.999000,

@@ -1,9 +1,9 @@
 #EXTM3U
 #EXT-X-VERSION:3
-#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Vietnamese",LANGUAGE="vi",DEFAULT=YES,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20%C3%82M/B%C3%B3ng%20ma%20Anh%20Qu%E1%BB%91c%20-%20Peaky%20Blinders/Season2/Ep1/ep1_vie.vtt"
-#EXT-X-PLAYLIST-TYPE:VOD
 #EXT-X-TARGETDURATION:10
 #EXT-X-MEDIA-SEQUENCE:0
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="UNKNOWN",LANGUAGE="unknown",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20%C3%82M/B%C3%B3ng%20ma%20Anh%20Qu%E1%BB%91c%20-%20Peaky%20Blinders/Season2/Ep1/ep1_vie.vtt"
+#EXT-X-PLAYLIST-TYPE:VOD
 #EXTINF:8.360000,
 https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202603305d0db2fefc6d0d714e299a12~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1806414116&x-signature=rMXCpN7QUpqhjm0fFbJoJ10LFaw%3D
 #EXTINF:3.040000,

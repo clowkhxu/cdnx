@@ -1,9 +1,9 @@
 #EXTM3U
 #EXT-X-VERSION:3
-#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Tiếng Việt",LANGUAGE="vi",DEFAULT=YES,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20%C3%82M/B%C3%B3ng%20ma%20Anh%20Qu%E1%BB%91c%20-%20Peaky%20Blinders/Season1/Ep3/ep3_vie.vtt"
-#EXT-X-PLAYLIST-TYPE:VOD
 #EXT-X-TARGETDURATION:10
 #EXT-X-MEDIA-SEQUENCE:0
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="UNKNOWN",LANGUAGE="unknown",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20%C3%82M/B%C3%B3ng%20ma%20Anh%20Qu%E1%BB%91c%20-%20Peaky%20Blinders/Season1/Ep3/ep3_vie.vtt"
+#EXT-X-PLAYLIST-TYPE:VOD
 #EXTINF:5.920000,
 https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202603305d0de973a6ba98f84d729f3f~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1806385277&x-signature=mAqfc6xBqscaOIkAFGqHO%2FobcgM%3D|https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202603305d0dfbe0ab1668ec451db5a6~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1806385277&x-signature=mH1UqBC4P3%2B58CTqgR3Pzgytfho%3D
 #EXTINF:4.080000,

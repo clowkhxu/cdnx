@@ -1,11 +1,11 @@
 #EXTM3U
 #EXT-X-VERSION:3
+#EXT-X-TARGETDURATION:10
+#EXT-X-MEDIA-SEQUENCE:0
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",LANGUAGE="en",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20%C3%82M/Ti%E1%BA%BFng%20Th%C3%A9t%20-%20Scream/Movie7/scream_7_eng_0.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",LANGUAGE="en",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20%C3%82M/Ti%E1%BA%BFng%20Th%C3%A9t%20-%20Scream/Movie7/scream_7_eng_1.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Vietnamese",LANGUAGE="vi",DEFAULT=YES,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20%C3%82M/Ti%E1%BA%BFng%20Th%C3%A9t%20-%20Scream/Movie7/scream_7_vie_3.vtt"
 #EXT-X-PLAYLIST-TYPE:VOD
-#EXT-X-TARGETDURATION:10
-#EXT-X-MEDIA-SEQUENCE:0
 #EXTINF:8.080000,
 https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/4a634defb0cc71718e1187b55970f97a|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/30a48f366c370566c2e1b21a755c203e|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/5dfdcead63be12ca7329e6adccc50040|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/a4aa4fa121276875056bcb8bdb56260e|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/80f32e03fdee9f42a54ae04ae5f58f24
 #EXTINF:4.000000,

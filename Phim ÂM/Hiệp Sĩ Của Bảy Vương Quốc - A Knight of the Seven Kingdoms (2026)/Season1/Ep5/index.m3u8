@@ -1,10 +1,10 @@
 #EXTM3U
 #EXT-X-VERSION:3
+#EXT-X-TARGETDURATION:10
+#EXT-X-MEDIA-SEQUENCE:0
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",LANGUAGE="en",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20%C3%82M/Hi%E1%BB%87p%20S%C4%A9%20C%E1%BB%A7a%20B%E1%BA%A3y%20V%C6%B0%C6%A1ng%20Qu%E1%BB%91c%20-%20A%20Knight%20of%20the%20Seven%20Kingdoms%20%282026%29/Season1/Ep5/ep5_eng_0.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Vietnamese",LANGUAGE="vi",DEFAULT=YES,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20%C3%82M/Hi%E1%BB%87p%20S%C4%A9%20C%E1%BB%A7a%20B%E1%BA%A3y%20V%C6%B0%C6%A1ng%20Qu%E1%BB%91c%20-%20A%20Knight%20of%20the%20Seven%20Kingdoms%20%282026%29/Season1/Ep5/ep5_vie_9.vtt"
 #EXT-X-PLAYLIST-TYPE:VOD
-#EXT-X-TARGETDURATION:10
-#EXT-X-MEDIA-SEQUENCE:0
 #EXTINF:10.509000,
 https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/0bfea23a809880b6039a3026dd8b02b9|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/e619a003e437c3f53b5865cf7be17ce7|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/91554e91af9b06a410d1019fe310de43|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/cbb3894bafd2de853cf22a9ed66447f1|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/7970471f5de5407161d747f490b593c5|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/843a096ae973c91725fb8574db143d8a|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/a549122dae5327669bda77c76d12f140|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/35e8e0e6540772f736c6eee52c223899|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/61e817bbb5d4caf2f767544cb97aa6b4|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/e0e00a4bcb4ba2218d07bf87d57a4713|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/6cf104432503f2f2c2758c5c2e288ca5|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/ff69bd2df50dcec2d8d66e3beba5f068|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/99cb2bde42acb5d44e4b202be133041f|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/e857735cff1f3a5e2cff810749c47b37|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/c22e14971aaeafb7cfeaca577135e9fa|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/63f57efb7252fec5688e17a17549dcff|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/5ab0d68f867b9cbb0231583becec2d87|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/b8c1538b8f220e9265399c6f03b2d021|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/9bd0cb3c01458c5c705a78472713bba4
 #EXTINF:3.211000,

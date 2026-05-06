@@ -1,9 +1,9 @@
 #EXTM3U
 #EXT-X-VERSION:3
-#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Vietnamese",LANGUAGE="vi",DEFAULT=YES,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20%C3%82M/B%C3%B3ng%20ma%20Anh%20Qu%E1%BB%91c%20-%20Peaky%20Blinders/Season2/Ep3/ep3_vie.vtt"
-#EXT-X-PLAYLIST-TYPE:VOD
 #EXT-X-TARGETDURATION:11
 #EXT-X-MEDIA-SEQUENCE:0
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="UNKNOWN",LANGUAGE="unknown",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20%C3%82M/B%C3%B3ng%20ma%20Anh%20Qu%E1%BB%91c%20-%20Peaky%20Blinders/Season2/Ep3/ep3_vie.vtt"
+#EXT-X-PLAYLIST-TYPE:VOD
 #EXTINF:6.960000,
 http://s3-eu-west-1.amazonaws.com/lecturequizuploads/c11a98f0-4f7a-4e2a-9b8d-c51e292e78d4|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/80731db8-947d-4533-8e26-cdc9362d67f0|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/53284aad-c626-46fa-9ac1-a2a872b0ac36|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/9c8969be-030c-4b0b-ada7-5dfc1e6dd07f|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/c6047531-9d96-4029-a2be-268fe5cd8fee|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/7900fa6f-8022-4b53-87a2-995dc33c2e9d|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/b564bfb9-d856-499b-9945-31122724468d|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/ea7f40e1-4a39-4676-89e9-0caf20555db8
 #EXTINF:5.640000,
