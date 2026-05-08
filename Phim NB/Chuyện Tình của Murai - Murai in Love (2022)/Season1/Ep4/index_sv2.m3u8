@@ -1,8 +1,8 @@
 #EXTM3U
 #EXT-X-VERSION:3
-#EXT-X-PLAYLIST-TYPE:VOD
 #EXT-X-TARGETDURATION:10
 #EXT-X-MEDIA-SEQUENCE:0
+#EXT-X-PLAYLIST-TYPE:VOD
 #EXTINF:12.512000,
 http://s3-eu-west-1.amazonaws.com/lecturequizuploads/c5fec078-ca64-4571-90c0-12eb35ddb5d6|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/a20b64c5-3762-4d66-89bf-37f31bbd8170|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/3891b8b0-d626-4ea6-b2c8-3534e1bdbec0|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/73b84455-ba49-434a-b0bc-88f78c8fae88|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/42c339b5-8b5d-4c77-8d0d-f2f7ea09bc8a
 #EXTINF:8.741000,

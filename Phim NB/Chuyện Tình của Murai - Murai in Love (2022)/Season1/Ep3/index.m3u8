@@ -1,8 +1,8 @@
 #EXTM3U
 #EXT-X-VERSION:3
-#EXT-X-PLAYLIST-TYPE:VOD
 #EXT-X-TARGETDURATION:10
 #EXT-X-MEDIA-SEQUENCE:0
+#EXT-X-PLAYLIST-TYPE:VOD
 #EXTINF:7.407000,
 https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/d1f93b3bab861bf02222c60cf3732616|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/2e1e3ce9d7e9112212d651125692b0c8|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/5b30ea0fdf756e87d1387a5c5e87560c
 #EXTINF:3.503000,
