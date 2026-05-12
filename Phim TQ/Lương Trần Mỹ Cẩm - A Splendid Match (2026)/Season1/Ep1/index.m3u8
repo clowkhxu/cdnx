@@ -12,6 +12,7 @@
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Portuguese",LANGUAGE="pt",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20TQ/L%C6%B0%C6%A1ng%20Tr%E1%BA%A7n%20M%E1%BB%B9%20C%E1%BA%A9m%20-%20A%20Splendid%20Match%20%282026%29/Season1/Ep1/ep1_por_5.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Spanish",LANGUAGE="es",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20TQ/L%C6%B0%C6%A1ng%20Tr%E1%BA%A7n%20M%E1%BB%B9%20C%E1%BA%A9m%20-%20A%20Splendid%20Match%20%282026%29/Season1/Ep1/ep1_spa_6.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Vietnamese",LANGUAGE="vi",DEFAULT=YES,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20TQ/L%C6%B0%C6%A1ng%20Tr%E1%BA%A7n%20M%E1%BB%B9%20C%E1%BA%A9m%20-%20A%20Splendid%20Match%20%282026%29/Season1/Ep1/ep1_vie_7.vtt"
+#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio-group",NAME="Thuyết Minh VN",LANGUAGE="vi",DEFAULT=YES,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20TQ/L%C6%B0%C6%A1ng%20Tr%E1%BA%A7n%20M%E1%BB%B9%20C%E1%BA%A9m%20-%20A%20Splendid%20Match%20%282026%29/Season1/Ep1/ep1_audio.m3u8"
 #EXT-X-PLAYLIST-TYPE:VOD
 #EXTINF:5.200000,
 https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/d06b605f5a54768b7e145c124a99b4d0|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/5a399bc1eb86948da663109003a4a7db
