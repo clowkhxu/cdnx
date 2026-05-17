@@ -41,7 +41,7 @@ def get_user_inputs():
     
     folder_path = filedialog.askdirectory(initialdir=CURRENT_DIR, title="Chọn thư mục đích (Ví dụ: .../Movie)")
     if not folder_path:
-        return None, None
+        return None, None, None
 
     intro_end = simpledialog.askstring(
         "Cấu hình Skip Intro", 
@@ -49,9 +49,22 @@ def get_user_inputs():
         parent=root
     )
     
-    return folder_path, intro_end
+    # --- TÙY CHỌN VIETSUB / THUYẾT MINH / LỒNG TIẾNG ---
+    audio_choice = simpledialog.askstring(
+        "Cấu hình M3U8",
+        "Chọn chế độ file M3U8 chính:\n1: Vietsub (Tạo file index.m3u8)\n2: Thuyết Minh (Tạo file epX_tm.m3u8)\n3: Lồng Tiếng (Tạo file epX_lt.m3u8)",
+        parent=root
+    )
+    
+    audio_mode = "VS" # Mặc định là Vietsub
+    if audio_choice == "2":
+        audio_mode = "TM"
+    elif audio_choice == "3":
+        audio_mode = "LT"
+        
+    return folder_path, intro_end, audio_mode
 
-def organize_files_from_source(base_dir):
+def organize_files_from_source(base_dir, audio_mode):
     print(f"\n🚀 --- BẮT ĐẦU CHUYỂN FILE & ĐỔI TÊN ---")
     if not os.path.exists(SOURCE_DIR):
         print(f"⚠️ Không tìm thấy nguồn: {SOURCE_DIR} (Sẽ bỏ qua bước copy, chuyển sang cập nhật M3U8)")
@@ -70,19 +83,44 @@ def organize_files_from_source(base_dir):
         if not os.path.exists(current_dest_dir):
             os.makedirs(current_dest_dir)
 
+        # Trích xuất tiền tố tập (vd: 'ep1', 'ep2'). Nếu là phim lẻ thư mục gốc thì dùng 'index'
+        ep_prefix = "index"
+        if dest_sub_dir.lower().startswith("ep"):
+            ep_prefix = dest_sub_dir.lower()
+
         for filename in files:
             src_full_path = os.path.join(root_dir, filename)
             dest_name = filename
             f_lower = filename.lower()
 
-            # --- LOGIC ĐỔI TÊN THÔNG MINH ---
+            # --- LOGIC ĐỔI TÊN MỚI (KHÔNG GHI ĐÈ FILE CHÍNH NẾU KHÁC LOẠI) ---
             if f_lower.endswith(".m3u8"):
                 if "_audio" in f_lower:
-                    dest_name = filename  # GIỮ NGUYÊN TÊN GỐC (Vd: ep1_audio.m3u8, ep1_audio_sv2.m3u8)
-                elif "_sv2" in f_lower:
-                    dest_name = "index_sv2.m3u8" # Video sv2 đổi thành index_sv2.m3u8
+                    # Nếu là file audio rời
+                    if audio_mode == "TM":
+                        dest_name = f_lower.replace("_audio", "_tm_audio")
+                    elif audio_mode == "LT":
+                        dest_name = f_lower.replace("_audio", "_lt_audio")
+                    else:
+                        dest_name = filename
                 else:
-                    dest_name = "index.m3u8"     # Video server 1 đổi thành index.m3u8
+                    # Nếu là file video CHÍNH
+                    if audio_mode == "TM":
+                        if "_sv2" in f_lower:
+                            dest_name = f"{ep_prefix}_tm_sv2.m3u8"
+                        else:
+                            dest_name = f"{ep_prefix}_tm.m3u8"
+                    elif audio_mode == "LT":
+                        if "_sv2" in f_lower:
+                            dest_name = f"{ep_prefix}_lt_sv2.m3u8"
+                        else:
+                            dest_name = f"{ep_prefix}_lt.m3u8"
+                    else:
+                        # Chế độ Vietsub -> dùng index như cũ
+                        if "_sv2" in f_lower:
+                            dest_name = "index_sv2.m3u8"
+                        else:
+                            dest_name = "index.m3u8"
 
             dest_full_path = os.path.join(current_dest_dir, dest_name)
             shutil.copy2(src_full_path, dest_full_path)
@@ -96,8 +134,11 @@ def update_playlist_files(base_dir, repo_sub_path, intro_end):
 
     for root_dir, dirs, files in os.walk(base_dir):
         vtt_files = sorted([f for f in files if f.endswith('.vtt')])
-        # Lọc ra các file audio (chứa từ khóa 'audio' và đuôi m3u8)
+        # Tìm file audio (có chứa chữ audio)
         audio_files = sorted([f for f in files if f.endswith('.m3u8') and '_audio' in f.lower()])
+        
+        # Tìm các file M3U8 là file chính (không chứa chữ audio)
+        main_playlists = [f for f in files if f.endswith('.m3u8') and '_audio' not in f.lower()]
         
         rel_dir = os.path.relpath(root_dir, base_dir)
         current_repo_path = repo_sub_path if rel_dir == "." else f"{repo_sub_path}{rel_dir.replace(os.sep, '/')}/"
@@ -120,8 +161,8 @@ def update_playlist_files(base_dir, repo_sub_path, intro_end):
                     f'DEFAULT={info["default"]},AUTOSELECT=YES,URI="{encoded_uri}"')
             sub_media_lines.append(line)
 
-        # --- 2. Kiểm tra và cập nhật TỪNG FILE index ---
-        for filename in ["index.m3u8", "index_sv2.m3u8"]:
+        # --- 2. Lặp qua TẤT CẢ các file M3U8 chính (index, ep1_tm, ep1_lt...) ---
+        for filename in main_playlists:
             file_path = os.path.join(root_dir, filename)
             if not os.path.exists(file_path):
                 continue
@@ -145,7 +186,6 @@ def update_playlist_files(base_dir, repo_sub_path, intro_end):
                 elif "#EXT-X-MEDIA-SEQUENCE" in line:
                     media_sequence = line.split(":")[-1]
                 elif line.startswith("#EXT-X-MEDIA:TYPE="):
-                    # Bắt cả SUBTITLES và AUDIO cũ để lọc trùng
                     uri_match = re.search(r'URI="([^"]+)"', line)
                     if uri_match:
                         existing_media[uri_match.group(1)] = line
@@ -156,23 +196,27 @@ def update_playlist_files(base_dir, repo_sub_path, intro_end):
                 elif line.startswith("#EXTINF") or (not line.startswith("#") and line) or line.startswith("#EXT-X-ENDLIST"):
                     preserved_segments.append(line)
 
-            # --- 3. Tạo danh sách thẻ EXT-X-MEDIA cho AUDIO (Riêng biệt cho từng file) ---
-            current_new_media = list(sub_media_lines) # Copy danh sách sub
+            # --- 3. Gắn thêm thẻ AUDIO (nếu có file audio rời) ---
+            is_sv2_playlist = "_sv2" in filename.lower()
+            current_new_media = list(sub_media_lines) # Gắn luôn sub cho file m3u8
+            
             for aud in audio_files:
-                full_repo_path = f"{current_repo_path}{aud}".replace("//", "/")
-                encoded_uri = GITHUB_BASE + urllib.parse.quote(full_repo_path)
+                is_sv2_audio = "_sv2" in aud.lower()
                 
-                # NẾU LÀ FILE index_sv2.m3u8 -> Chỉ gắn ep..._audio_sv2.m3u8
-                if filename == "index_sv2.m3u8" and "_sv2" in aud.lower():
-                    line = (f'#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio-group-sv2",'
-                            f'NAME="Thuyết Minh VN",LANGUAGE="vi",'
-                            f'DEFAULT=YES,AUTOSELECT=YES,URI="{encoded_uri}"')
-                    current_new_media.append(line)
+                # Cùng là sv1 hoặc cùng là sv2 thì mới gắn vào
+                if is_sv2_playlist == is_sv2_audio:
+                    full_repo_path = f"{current_repo_path}{aud}".replace("//", "/")
+                    encoded_uri = GITHUB_BASE + urllib.parse.quote(full_repo_path)
                     
-                # NẾU LÀ FILE index.m3u8 -> Chỉ gắn ep..._audio.m3u8 (bỏ qua file có chữ sv2)
-                elif filename == "index.m3u8" and "_audio" in aud.lower() and "_sv2" not in aud.lower():
-                    line = (f'#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio-group",'
-                            f'NAME="Thuyết Minh VN",LANGUAGE="vi",'
+                    audio_name = "Thuyết Minh VN" 
+                    if "_tm" in aud.lower() or "_tm" in filename.lower():
+                        audio_name = "Thuyết Minh"
+                    elif "_lt" in aud.lower() or "_lt" in filename.lower():
+                        audio_name = "Lồng Tiếng"
+
+                    group_id = 'audio-group-sv2' if is_sv2_playlist else 'audio-group'
+                    line = (f'#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="{group_id}",'
+                            f'NAME="{audio_name}",LANGUAGE="vi",'
                             f'DEFAULT=YES,AUTOSELECT=YES,URI="{encoded_uri}"')
                     current_new_media.append(line)
 
@@ -212,7 +256,7 @@ def update_playlist_files(base_dir, repo_sub_path, intro_end):
 
 if __name__ == "__main__":
     print("--- Tool Xử Lý M3U8 (Subtitles & Audio) ---")
-    BASE_DIR, INTRO_END = get_user_inputs()
+    BASE_DIR, INTRO_END, AUDIO_MODE = get_user_inputs()
     
     if not BASE_DIR:
         print("⚠️ Bạn chưa chọn thư mục. Đã hủy!")
@@ -225,6 +269,6 @@ if __name__ == "__main__":
 
         print(f"📁 Thư mục đích: {BASE_DIR}")
         
-        organize_files_from_source(BASE_DIR)
+        organize_files_from_source(BASE_DIR, AUDIO_MODE)
         update_playlist_files(BASE_DIR, REPO_SUB_PATH, INTRO_END)
         print("\n✨ --- HOÀN TẤT ---")
