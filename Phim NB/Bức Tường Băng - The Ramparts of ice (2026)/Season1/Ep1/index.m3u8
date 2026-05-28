@@ -1,5 +1,7 @@
 #EXTM3U
 #EXT-X-VERSION:3
+#EXT-X-TARGETDURATION:10
+#EXT-X-MEDIA-SEQUENCE:0
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="UNKNOWN",LANGUAGE="unknown",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20NB/B%E1%BB%A9c%20T%C6%B0%E1%BB%9Dng%20B%C4%83ng%20-%20The%20Ramparts%20of%20ice%20%282026%29/Season1/Ep1/ep1_ara_5.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="UNKNOWN",LANGUAGE="unknown",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20NB/B%E1%BB%A9c%20T%C6%B0%E1%BB%9Dng%20B%C4%83ng%20-%20The%20Ramparts%20of%20ice%20%282026%29/Season1/Ep1/ep1_baq_13.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="UNKNOWN",LANGUAGE="unknown",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20NB/B%E1%BB%A9c%20T%C6%B0%E1%BB%9Dng%20B%C4%83ng%20-%20The%20Ramparts%20of%20ice%20%282026%29/Season1/Ep1/ep1_cat_6.vtt"
@@ -40,8 +42,6 @@
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Ukrainian",LANGUAGE="uk",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20NB/B%E1%BB%A9c%20T%C6%B0%E1%BB%9Dng%20B%C4%83ng%20-%20The%20Ramparts%20of%20ice%20%282026%29/Season1/Ep1/ep1_ukr_35.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Vietnamese",LANGUAGE="vi",DEFAULT=YES,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20NB/B%E1%BB%A9c%20T%C6%B0%E1%BB%9Dng%20B%C4%83ng%20-%20The%20Ramparts%20of%20ice%20%282026%29/Season1/Ep1/ep1_vie_36.vtt"
 #EXT-X-PLAYLIST-TYPE:VOD
-#EXT-X-TARGETDURATION:10
-#EXT-X-MEDIA-SEQUENCE:0
 #EXTINF:5.046000,
 https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/a861f23bdf3742aeb289feefaa0594e3|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/64b393af5e0d290660174a0f4c38e8ba
 #EXTINF:5.004000,
