@@ -1,10 +1,10 @@
 #EXTM3U
 #EXT-X-VERSION:3
+#EXT-X-TARGETDURATION:10
+#EXT-X-MEDIA-SEQUENCE:0
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",LANGUAGE="en",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20NB/T%C3%AAn%20C%E1%BA%ADu%20L%C3%A0%20G%C3%AC%20-%20Your%20Name%20%282016%29/Movie/your_name_2016_eng_2.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Vietnamese",LANGUAGE="vi",DEFAULT=YES,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20NB/T%C3%AAn%20C%E1%BA%ADu%20L%C3%A0%20G%C3%AC%20-%20Your%20Name%20%282016%29/Movie/your_name_2016_vie_1.vtt"
 #EXT-X-PLAYLIST-TYPE:VOD
-#EXT-X-TARGETDURATION:10
-#EXT-X-MEDIA-SEQUENCE:0
 #EXTINF:10.092411,
 https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/5db09b8bbc4d28146356368c79d73755|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/650bc07398b89dc2173622705fd54ac3|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/47ee44067bcea0ee820f17c13e116169|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/3f5b8748866ce2cbce55cffb9c56717f|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/a5fc67577effe8acfad7ebe80280d701|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/7e001fec8c9c27b7676c6977e5833fe5|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/aee7d2633f45a72e63ce64c796d422b8|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/9d5586fc5eed65924e83fc2d2a884d5c|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/93f3fccc58be5e0e858436d763310d93|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/9c894315d3c3f9e517351c4d8cfc91c9|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/0e259e1f9d1244d6f5d00779243496e1|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/3a75a6a0f14b2c15f01ac9563c0b0474|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/1372ca41b8f58a4cf8aa33cdca451970|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/3810fa8ac083f142e8ac645d44f0d7b1|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/98ca6313951d3d0125ffa55d1318dac1|https://p16-sg.tiktokcdn.com/obj/tos-alisg-avt-0068/6f8e3b59298e030d05154811182e0f2b
 #EXTINF:1.042000,

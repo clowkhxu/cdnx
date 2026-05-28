@@ -1,10 +1,10 @@
 #EXTM3U
 #EXT-X-VERSION:3
+#EXT-X-TARGETDURATION:10
+#EXT-X-MEDIA-SEQUENCE:0
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",LANGUAGE="en",DEFAULT=NO,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20NB/T%C3%AAn%20C%E1%BA%ADu%20L%C3%A0%20G%C3%AC%20-%20Your%20Name%20%282016%29/Movie/your_name_2016_eng_2.vtt"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Vietnamese",LANGUAGE="vi",DEFAULT=YES,AUTOSELECT=YES,URI="https://raw.githubusercontent.com/clowkhxu/cdnx/refs/heads/main/Phim%20NB/T%C3%AAn%20C%E1%BA%ADu%20L%C3%A0%20G%C3%AC%20-%20Your%20Name%20%282016%29/Movie/your_name_2016_vie_1.vtt"
 #EXT-X-PLAYLIST-TYPE:VOD
-#EXT-X-TARGETDURATION:10
-#EXT-X-MEDIA-SEQUENCE:0
 #EXTINF:10.092411,
 http://s3-eu-west-1.amazonaws.com/lecturequizuploads/a2773215-d270-4460-a3b8-ad90fe608f82|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/2f9a1dbf-d52b-4038-9772-f35a379b8a60|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/89ada12f-cdc0-4669-b1b1-964dd6196f2e|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/67ef6d81-6e75-4bb8-9b3c-96f686f2d48c|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/0b3977b7-287c-4691-8b3f-b6a2c0303d01|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/919200f0-f1a4-4ce7-a600-02ffc87e3a6b|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/5fbaa8a8-6e9a-4d2b-9a79-682d4410556f|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/fe35573e-2c0b-4fa6-8b00-618a40d37cfd|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/b0f9046b-29e1-4684-a61c-1905231b753e|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/778dbab8-c6a9-4a21-bee5-1ccce42f0033|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/ab1bf659-2158-474d-9b3e-e31a229ade1a|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/e8c9103c-12f4-4f95-b1df-f1a9a2321bd7|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/bcd9d0ea-cf0e-4f08-9fe6-58b292dd38a4|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/62e62616-e97c-4834-bcee-91fed34157dd|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/4e005f9d-7d74-4a76-8dc0-29fd72575fe2|http://s3-eu-west-1.amazonaws.com/lecturequizuploads/ab655f52-e765-4d71-80c7-e8111da0ce35
 #EXTINF:1.042000,
