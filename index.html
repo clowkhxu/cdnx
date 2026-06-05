@@ -1,91 +1,494 @@
 <!DOCTYPE html>
-
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>Subtitle Splitter (GIỮ NGUYÊN 100%)</title>
-  <style>
-    body { font-family: Arial; padding: 20px; }
-    textarea { width: 100%; height: 220px; margin-top: 10px; }
-    .chunk { margin-bottom: 25px; }
-    button { margin-top: 5px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M3U8 Player Bypass & Subtitle Fix</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@1.4.12/dist/hls.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/artplayer/dist/artplayer.js"></script>
+
+    <style>
+        body { margin: 0; padding: 20px; background-color: #121212; color: #ffffff; font-family: Arial, sans-serif; }
+        .container { max-width: 900px; margin: 0 auto; }
+        .form-group { margin-bottom: 15px; display: flex; flex-direction: column; gap: 5px; }
+        label { font-weight: bold; font-size: 14px; }
+        input[type="text"], input[type="number"] { padding: 10px; border-radius: 4px; border: 1px solid #444; background-color: #222; color: #fff; width: 100%; box-sizing: border-box; }
+        .row { display: flex; gap: 15px; }
+        .row .form-group { flex: 1; }
+        
+        /* Giao diện bộ Sync Sub */
+        .sync-box { background-color: #1a1a1a; padding: 15px; border-radius: 6px; border: 1px dashed #444; margin-bottom: 15px; }
+        .sync-buttons { display: flex; gap: 10px; margin-top: 5px; flex-wrap: wrap; }
+        .btn-small { padding: 8px 12px; background-color: #333; color: #fff; border: 1px solid #555; border-radius: 4px; cursor: pointer; font-size: 13px; }
+        .btn-small:hover { background-color: #444; }
+        .btn-download { padding: 8px 15px; background-color: #2e7d32; color: #fff; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 13px; }
+        .btn-download:hover { background-color: #1b5e20; }
+        .btn-download:disabled { background-color: #444; color: #888; cursor: not-allowed; }
+
+        button#btn-play { padding: 12px 20px; background-color: #a2b2ff; color: #000; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; width: 100%; font-size: 16px; margin-bottom: 20px; }
+        button:hover { background-color: #899dff; }
+        #player-wrapper { width: 100%; aspect-ratio: 16 / 9; background-color: #000; position: relative; border-radius: 8px; overflow: hidden; }
+        .artplayer-app { width: 100%; height: 100%; }
+
+        /* Ép kiểu CSS Subtitle hiển thị to rõ */
+        html body .artplayer-app .art-video-player .art-subtitle {
+            font-family: 'Montserrat', sans-serif !important;
+            font-weight: 600 !important;
+            font-style: normal !important;
+            color: #ffffff !important;
+            font-size: 26px !important; /* Tăng kích thước chữ mặc định */
+            text-shadow: 
+                2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 
+                0px 2px 0 #000, 2px 0px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000,
+                0px 4px 5px rgba(0,0,0,0.5) !important;
+        }
+    </style>
 </head>
 <body>
 
-<h2>✂️ Chia subtitle (không đổi timeline)</h2>
+<div class="container">
+    <h2>M3U8 Player (Sửa lỗi không nhận Sub)</h2>
+    
+    <div class="form-group">
+        <label for="m3u8-url">Link Stream M3U8:</label>
+        <input type="text" id="m3u8-url" placeholder="Nhập link m3u8 vào đây..." value="">
+    </div>
 
-<input type="file" id="fileInput" accept=".srt,.txt,.ass,.vtt"><br><br>
+    <div class="row">
+        <div class="form-group">
+            <label for="sub-url">Link Phụ đề từ Internet (VTT):</label>
+            <input type="text" id="sub-url" placeholder="https://example.com/sub.vtt">
+        </div>
+        <div class="form-group">
+            <label for="sub-file">Hoặc Tải file phụ đề (.srt, .vtt) từ máy:</label>
+            <input type="file" id="sub-file" accept=".vtt,.srt" style="color: #fff; margin-top: 5px;">
+        </div>
+    </div>
 
-<label>Số block mỗi phần:</label> <input type="number" id="blocksPerChunk" value="20"><br><br>
+    <div class="sync-box">
+        <div class="form-group">
+            <label for="sub-offset">Điều chỉnh thời gian Sub (giây):</label>
+            <input type="number" id="sub-offset" step="0.1" value="0.0">
+            <small style="color: #aaa; margin-top: 2px;">Số dương (+) làm sub xuất hiện trễ hơn; Số âm (-) làm sub xuất hiện sớm hơn.</small>
+        </div>
+        <div class="sync-buttons">
+            <button class="btn-small" onclick="adjustOffset(-0.5)">Nhanh hơn 0.5s (-0.5s)</button>
+            <button class="btn-small" onclick="adjustOffset(0.5)">Chậm lại 0.5s (+0.5s)</button>
+            <button class="btn-small" style="background-color: #552222;" onclick="adjustOffset(0, true)">Đặt lại về 0</button>
+            <button id="btn-download-sub" class="btn-download" disabled>📥 TẢI FILE SUB .VTT ĐÃ ĐỒNG BỘ</button>
+        </div>
+    </div>
 
-<button onclick="splitFile()">Chia file</button>
+    <button id="btn-play">PHÁT VIDEO</button>
 
-<div id="output"></div>
+    <div id="player-wrapper">
+        <div id="artplayer" class="artplayer-app"></div>
+    </div>
+</div>
 
 <script>
-function copyText(textarea) {
-  textarea.select();
-  document.execCommand("copy");
-  alert("Đã copy!");
-}
+    // ========================================================
+    // LOGIC WORKER GIẢI MÃ VIDEO M3U8
+    // ========================================================
+    const workerCode = `
+        const SECRET_KEY = "AntiScanKey2026";
+        const SECRET_KEY_BYTES = new TextEncoder().encode(SECRET_KEY);
+        const ENCRYPT_SIZE = 2048;
+        let learnedOffset = null;
+        const abortControllers = new Map();
 
-function splitFile() {
-  const fileInput = document.getElementById('fileInput');
-  const blocksPerChunk = parseInt(document.getElementById('blocksPerChunk').value);
-  const output = document.getElementById('output');
-  output.innerHTML = "";
+        function getTsOffset(data) {
+            if (learnedOffset !== null) return learnedOffset;
+            const maxSearch = Math.min(data.length, 300);
+            for (let i = 0; i < maxSearch; i++) {
+                if (data[i] === 0x49 && data[i + 1] === 0x45 && data[i + 2] === 0x4e && data[i + 3] === 0x44) {
+                    learnedOffset = i + 8;
+                    return learnedOffset;
+                }
+            }
+            return 70;
+        }
 
-  if (!fileInput.files.length) {
-    alert("Chọn file trước!");
-    return;
-  }
+        async function decodeUrlsToTsBuffer(urlsString, signal) {
+            const urls = urlsString.split("|").map((u) => u.trim()).filter(Boolean);
+            if (!urls.length) throw new Error("Danh sách URL rỗng");
 
-  const file = fileInput.files[0];
-  const reader = new FileReader();
+            const responses = await Promise.all(
+                urls.map((u) => fetch(u, { cache: "force-cache", signal }))
+            );
 
-  reader.onload = function(e) {
-    let originalText = e.target.result;
+            const chunks = await Promise.all(
+                responses.map(async (res) => {
+                    if (!res.ok) throw new Error("HTTP error! status: " + res.status);
+                    return new Uint8Array(await res.arrayBuffer());
+                })
+            );
 
-    // Chuẩn hóa xuống dòng nhưng KHÔNG thay đổi nội dung
-    let normalized = originalText.replace(/\r\n/g, "\n");
+            let totalRawLength = 0;
+            const rawParts = [];
 
-    // Tách block bằng dòng trống
-    let blocks = normalized.split(/\n{2,}/);
+            for (const chunk of chunks) {
+                const offset = getTsOffset(chunk);
+                if (chunk.length > offset) {
+                    const tsPart = chunk.subarray(offset);
+                    rawParts.push(tsPart);
+                    totalRawLength += tsPart.length;
+                }
+            }
 
-    let part = 1;
+            if (totalRawLength <= 4) throw new Error("Dữ liệu TS trống hoặc không hợp lệ");
 
-    for (let i = 0; i < blocks.length; i += blocksPerChunk) {
-      let chunkBlocks = blocks.slice(i, i + blocksPerChunk);
+            const combinedRaw = new Uint8Array(totalRawLength);
+            let currentPos = 0;
+            for (const part of rawParts) {
+                combinedRaw.set(part, currentPos);
+                currentPos += part.length;
+            }
 
-      // GHÉP LẠI y như cũ (1 dòng trống giữa block)
-      let chunkText = chunkBlocks.join("\n\n");
+            const dataSize = ((combinedRaw[0] << 24) | (combinedRaw[1] << 16) | (combinedRaw[2] << 8) | combinedRaw[3]) >>> 0;
+            if (dataSize === 0 || dataSize > totalRawLength - 4) {
+                learnedOffset = null; 
+                throw new Error("Kích thước dữ liệu TS không khớp");
+            }
 
-      let div = document.createElement("div");
-      div.className = "chunk";
+            const encryptedData = combinedRaw.subarray(4, 4 + dataSize);
+            const decryptedBuffer = new ArrayBuffer(dataSize);
+            const decryptedView = new Uint8Array(decryptedBuffer);
+            const keyLen = SECRET_KEY_BYTES.length;
 
-      let title = document.createElement("h3");
-      title.textContent = "Phần " + part;
+            let isFastMode = false;
+            if (dataSize > 2256) {
+                if (encryptedData[2068] === 0x47 && encryptedData[2256] === 0x47) {
+                    isFastMode = true;
+                }
+            }
 
-      let textarea = document.createElement("textarea");
-      textarea.value = chunkText;
+            if (isFastMode) {
+                decryptedView.set(encryptedData);
+                const limit = Math.min(dataSize, ENCRYPT_SIZE);
+                for (let i = 0; i < limit; i++) {
+                    decryptedView[i] = encryptedData[i] ^ SECRET_KEY_BYTES[i % keyLen];
+                }
+            } else {
+                for (let i = 0; i < dataSize; i++) {
+                    decryptedView[i] = encryptedData[i] ^ SECRET_KEY_BYTES[i % keyLen];
+                }
+            }
+            return decryptedBuffer;
+        }
 
-      let btn = document.createElement("button");
-      btn.textContent = "Copy";
-      btn.onclick = () => copyText(textarea);
+        self.onmessage = async (event) => {
+            const { id, urlsString, action } = event.data;
+            if (action === "abort") {
+                const controller = abortControllers.get(id);
+                if (controller) { controller.abort(); abortControllers.delete(id); }
+                return;
+            }
 
-      div.appendChild(title);
-      div.appendChild(textarea);
-      div.appendChild(btn);
+            const controller = new AbortController();
+            abortControllers.set(id, controller);
 
-      output.appendChild(div);
-      part++;
+            try {
+                const buffer = await decodeUrlsToTsBuffer(urlsString, controller.signal);
+                if (abortControllers.has(id)) {
+                    abortControllers.delete(id);
+                    self.postMessage({ id, ok: true, buffer }, [buffer]);
+                }
+            } catch (err) {
+                abortControllers.delete(id);
+                self.postMessage({ id, ok: false, error: err.message });
+            }
+        };
+    `;
+
+    const blob = new Blob([workerCode], { type: "application/javascript" });
+    const workerUrl = URL.createObjectURL(blob);
+    let decodeWorker = new Worker(workerUrl);
+
+    let requestId = 0;
+    const pendingRequests = new Map();
+
+    decodeWorker.onmessage = (event) => {
+        const data = event.data;
+        const pending = pendingRequests.get(data.id);
+        if (!pending) return;
+        pendingRequests.delete(data.id);
+        if (data.ok) pending.resolve(data.buffer);
+        else pending.reject(new Error(data.error));
+    };
+
+    // ========================================================
+    // QUẢN LÝ DỮ LIỆU SUB, ĐỒNG BỘ VÀ RE-TIMESTAMP ĐỂ TẢI VỀ
+    // ========================================================
+    let rawVttContent = ""; 
+
+    function srtToVtt(srtText) {
+        let vttText = 'WEBVTT\n\n' + srtText;
+        vttText = vttText.replace(/(\d\d:\d\d:\d\d),(\d\d\d)/g, '$1.$2');
+        return vttText;
     }
-  };
 
-  reader.readAsText(file);
-}
+    function parseTime(timeStr) {
+        const parts = timeStr.trim().split(':');
+        let hrs = 0, mins = 0, secs = 0;
+        if (parts.length === 3) {
+            hrs = parseFloat(parts[0]); mins = parseFloat(parts[1]); secs = parseFloat(parts[2]);
+        } else if (parts.length === 2) {
+            mins = parseFloat(parts[0]); secs = parseFloat(parts[1]);
+        }
+        return hrs * 3600 + mins * 60 + secs;
+    }
+
+    function formatTime(totalSeconds) {
+        if (totalSeconds < 0) totalSeconds = 0;
+        const hrs = Math.floor(totalSeconds / 3600);
+        const mins = Math.floor((totalSeconds % 3600) / 60);
+        const secs = Math.floor(totalSeconds % 60);
+        const ms = Math.round((totalSeconds % 1) * 1000);
+        return `${String(hrs).padStart(2, '0')}:${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}.${String(ms).padStart(3, '0')}`;
+    }
+
+    function generateShiftedVtt(vttText, offsetSeconds) {
+        if (!vttText) return "";
+        const lines = vttText.split(/\r?\n/);
+        let output = [];
+        if (!lines[0].startsWith("WEBVTT")) output.push("WEBVTT\n");
+        const timeRegex = /(\d\d:\d\d:\d\d[\.,]\d\d\d)\s*-->\s*(\d\d:\d\d:\d\d[\.,]\d\d\d)/;
+
+        for (let i = 0; i < lines.length; i++) {
+            let line = lines[i];
+            const match = line.match(timeRegex);
+            if (match) {
+                let startSecs = parseTime(match[1].replace(',', '.')) + offsetSeconds;
+                let endSecs = parseTime(match[2].replace(',', '.')) + offsetSeconds;
+                output.push(`${formatTime(startSecs)} --> ${formatTime(endSecs)}`);
+            } else {
+                output.push(line);
+            }
+        }
+        return output.join('\n');
+    }
+
+    // Tải file phụ đề .vtt mới về máy
+    document.getElementById('btn-download-sub').addEventListener('click', function() {
+        if (!rawVttContent) return;
+        const offset = parseFloat(document.getElementById('sub-offset').value) || 0;
+        const shiftedSubText = generateShiftedVtt(rawVttContent, offset);
+        
+        const blobDownload = new Blob([shiftedSubText], { type: 'text/vtt;charset=utf-8' });
+        const downloadUrl = URL.createObjectURL(blobDownload);
+        const a = document.createElement('a');
+        a.href = downloadUrl;
+        a.download = `synced_subtitle_${offset >= 0 ? '+' : ''}${offset}s.vtt`;
+        a.click();
+        URL.revokeObjectURL(downloadUrl);
+    });
+
+    // Hàm căn chỉnh offset cho giao diện và player
+    function adjustOffset(value, reset = false) {
+        const input = document.getElementById('sub-offset');
+        if (reset) input.value = "0.0";
+        else input.value = ((parseFloat(input.value) || 0) + value).toFixed(1);
+        
+        applyOffsetToPlayer();
+    }
+
+    function applyOffsetToPlayer() {
+        const offset = parseFloat(document.getElementById('sub-offset').value) || 0;
+        // Fix ArtPlayer 5.x: Gán trực tiếp vào thuộc tính art.subtitle.offset thay vì option
+        if (art && art.subtitle) {
+            art.subtitle.offset = offset; 
+        }
+    }
+
+    document.getElementById('sub-offset').addEventListener('input', applyOffsetToPlayer);
+
+    function extractTsWithAbort(urlsString) {
+        const id = ++requestId;
+        let abortCurrentLoad = null;
+        const promise = new Promise((resolve, reject) => {
+            pendingRequests.set(id, { resolve, reject });
+            decodeWorker.postMessage({ id, urlsString, action: "decode" });
+        });
+        const abort = () => {
+            decodeWorker.postMessage({ id, action: "abort" });
+            const req = pendingRequests.get(id);
+            if (req) { req.reject(new Error("ABORTED")); pendingRequests.delete(id); }
+        };
+        return { promise, abort };
+    }
+
+    // ========================================================
+    // XỬ LÝ KHỞI TẠO PLAYER
+    // ========================================================
+    let art = null;
+    let localSubUrl = "";
+
+    document.getElementById('sub-file').addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = function(evt) {
+            let textContent = evt.target.result;
+
+            if (file.name.endsWith('.srt')) {
+                textContent = srtToVtt(textContent);
+            }
+
+            rawVttContent = textContent; 
+            document.getElementById('btn-download-sub').disabled = false; 
+
+            if (localSubUrl) URL.revokeObjectURL(localSubUrl);
+            const subBlob = new Blob([textContent], { type: 'text/vtt' });
+            localSubUrl = URL.createObjectURL(subBlob);
+            
+            document.getElementById('sub-url').value = ""; 
+            console.log("Đã nạp file phụ đề thành công!");
+        };
+        reader.readAsText(file, 'utf-8');
+    });
+
+    async function fetchExternalSubText(url) {
+        try {
+            const res = await fetch(url);
+            if (res.ok) {
+                rawVttContent = await res.text();
+                document.getElementById('btn-download-sub').disabled = false;
+            }
+        } catch (e) {
+            console.error("Không thể lấy text gốc từ link sub do chặn CORS:", e);
+        }
+    }
+
+    document.getElementById('btn-play').addEventListener('click', async function() {
+        const m3u8Url = document.getElementById('m3u8-url').value.trim();
+        const inputSubUrl = document.getElementById('sub-url').value.trim();
+        const finalSubUrl = localSubUrl || inputSubUrl;
+        const initialOffset = parseFloat(document.getElementById('sub-offset').value) || 0;
+
+        if (!m3u8Url) { alert("Vui lòng nhập link M3U8!"); return; }
+
+        if (inputSubUrl && !localSubUrl) {
+            await fetchExternalSubText(inputSubUrl);
+        }
+
+        if (art) { art.destroy(true); art = null; }
+
+        class CustomFragmentLoader extends window.Hls.DefaultConfig.loader {
+            constructor(config) {
+                super(config);
+                this.abortCurrentLoad = null;
+                this.load = async (context, loadConfig, callbacks) => {
+                    let urlStr = String(context.url || "");
+                    if (urlStr.split('?')[0].toLowerCase().endsWith(".ts")) {
+                        super.load(context, loadConfig, callbacks);
+                        return;
+                    }
+                    try {
+                        const trequest = performance.now();
+                        const { promise, abort } = extractTsWithAbort(urlStr);
+                        this.abortCurrentLoad = abort;
+                        const buffer = await promise;
+                        this.abortCurrentLoad = null;
+                        const tnow = performance.now();
+                        callbacks.onSuccess(
+                            { url: urlStr, data: buffer }, 
+                            { trequest, tfirst: tnow, tload: tnow, loaded: buffer.byteLength, total: buffer.byteLength },
+                            context
+                        );
+                    } catch (err) {
+                        if (err.message === "ABORTED") {
+                            if (callbacks.onAbort) callbacks.onAbort(context.stats, context, null);
+                            return;
+                        }
+                        callbacks.onError({ code: 404, text: err.message }, context, null);
+                    }
+                };
+            }
+            abort() { if (this.abortCurrentLoad) { this.abortCurrentLoad(); this.abortCurrentLoad = null; } }
+        }
+
+        class CustomPlaylistLoader extends window.Hls.DefaultConfig.loader {
+            constructor(config) {
+                super(config);
+                const originalLoad = this.load.bind(this);
+                this.load = (context, loadConfig, callbacks) => {
+                    const originalOnSuccess = callbacks.onSuccess;
+                    callbacks.onSuccess = (response, stats, ctx) => {
+                        if (response.data) {
+                            const isArrayBuffer = response.data instanceof ArrayBuffer;
+                            let text = isArrayBuffer ? new TextDecoder().decode(response.data) : response.data;
+                            if (text.includes('#EXTM3U')) {
+                                let lines = text.split(/\r?\n/);
+                                let newLines = []; let parts = [];
+                                for (let i = 0; i < lines.length; i++) {
+                                    let line = lines[i].trim();
+                                    if (line.startsWith('#EXT-X-PART:')) { parts.push(line.substring(12)); }
+                                    else if (line.startsWith('http') && parts.length > 0) { newLines.push(parts.join('|')); parts = []; }
+                                    else if (line !== '') { newLines.push(line); }
+                                }
+                                text = newLines.join('\n');
+                                response.data = isArrayBuffer ? new TextEncoder().encode(text).buffer : text;
+                            }
+                        }
+                        originalOnSuccess(response, stats, ctx);
+                    };
+                    originalLoad(context, loadConfig, callbacks);
+                };
+            }
+        }
+
+        // Cấu hình khởi tạo Artplayer kèm Sub
+        art = new window.Artplayer({
+            container: '#artplayer',
+            url: m3u8Url,
+            type: 'm3u8',
+            autoplay: true,
+            fullscreen: true,
+            theme: '#a2b2ff',
+            // Fix Artplayer 5.x: Biến subtitleOffset ở option phải nhận kiểu Boolean để bật thanh kéo trong settings UI
+            subtitleOffset: true, 
+            subtitle: finalSubUrl ? {
+                url: finalSubUrl,
+                type: 'vtt',
+                encoding: 'utf-8',
+            } : {},
+            customType: {
+                m3u8: function (video, url, artInstance) {
+                    if (window.Hls.isSupported()) {
+                        if (artInstance.hls) artInstance.hls.destroy();
+                        const hls = new window.Hls({
+                            pLoader: CustomPlaylistLoader,
+                            fLoader: CustomFragmentLoader,
+                            enableWorker: true,
+                        });
+                        hls.loadSource(url);
+                        hls.attachMedia(video);
+                        artInstance.hls = hls;
+                        artInstance.on('destroy', () => hls.destroy());
+                    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                        video.src = url;
+                    }
+                }
+            }
+        });
+
+        art.on('ready', () => {
+            if (finalSubUrl) {
+                art.subtitle.show = true;
+                // Áp dụng giây lệch ban đầu ngay khi player sẵn sàng
+                art.subtitle.offset = initialOffset; 
+            }
+        });
+
+        // Đồng bộ ngược giá trị lệch nếu người dùng kéo thanh trượt bên trong trình phát Artplayer ra ô ngoài giao diện web
+        art.on('subtitle:offset', (offset) => {
+            document.getElementById('sub-offset').value = offset.toFixed(1);
+        });
+    });
 </script>
-
 </body>
 </html>
