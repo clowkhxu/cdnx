@@ -297,7 +297,6 @@
 
     function applyOffsetToPlayer() {
         const offset = parseFloat(document.getElementById('sub-offset').value) || 0;
-        // Fix ArtPlayer 5.x: Gán trực tiếp vào thuộc tính art.subtitle.offset thay vì option
         if (art && art.subtitle) {
             art.subtitle.offset = offset; 
         }
@@ -342,6 +341,7 @@
             document.getElementById('btn-download-sub').disabled = false; 
 
             if (localSubUrl) URL.revokeObjectURL(localSubUrl);
+            
             const subBlob = new Blob([textContent], { type: 'text/vtt' });
             localSubUrl = URL.createObjectURL(subBlob);
             
@@ -357,6 +357,10 @@
             if (res.ok) {
                 rawVttContent = await res.text();
                 document.getElementById('btn-download-sub').disabled = false;
+                
+                if (localSubUrl) URL.revokeObjectURL(localSubUrl);
+                const subBlob = new Blob([rawVttContent], { type: 'text/vtt' });
+                localSubUrl = URL.createObjectURL(subBlob);
             }
         } catch (e) {
             console.error("Không thể lấy text gốc từ link sub do chặn CORS:", e);
@@ -366,14 +370,15 @@
     document.getElementById('btn-play').addEventListener('click', async function() {
         const m3u8Url = document.getElementById('m3u8-url').value.trim();
         const inputSubUrl = document.getElementById('sub-url').value.trim();
-        const finalSubUrl = localSubUrl || inputSubUrl;
         const initialOffset = parseFloat(document.getElementById('sub-offset').value) || 0;
 
         if (!m3u8Url) { alert("Vui lòng nhập link M3U8!"); return; }
 
-        if (inputSubUrl && !localSubUrl) {
+        if (inputSubUrl && !document.getElementById('sub-file').files[0]) {
             await fetchExternalSubText(inputSubUrl);
         }
+
+        const finalSubUrl = localSubUrl || inputSubUrl;
 
         if (art) { art.destroy(true); art = null; }
 
@@ -441,7 +446,6 @@
             }
         }
 
-        // Cấu hình khởi tạo Artplayer kèm Sub
         art = new window.Artplayer({
             container: '#artplayer',
             url: m3u8Url,
@@ -449,7 +453,6 @@
             autoplay: true,
             fullscreen: true,
             theme: '#a2b2ff',
-            // Fix Artplayer 5.x: Biến subtitleOffset ở option phải nhận kiểu Boolean để bật thanh kéo trong settings UI
             subtitleOffset: true, 
             subtitle: finalSubUrl ? {
                 url: finalSubUrl,
@@ -479,12 +482,12 @@
         art.on('ready', () => {
             if (finalSubUrl) {
                 art.subtitle.show = true;
-                // Áp dụng giây lệch ban đầu ngay khi player sẵn sàng
-                art.subtitle.offset = initialOffset; 
+                setTimeout(() => {
+                    art.subtitle.offset = initialOffset;
+                }, 20);
             }
         });
 
-        // Đồng bộ ngược giá trị lệch nếu người dùng kéo thanh trượt bên trong trình phát Artplayer ra ô ngoài giao diện web
         art.on('subtitle:offset', (offset) => {
             document.getElementById('sub-offset').value = offset.toFixed(1);
         });
