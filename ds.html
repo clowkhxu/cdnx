@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Generator Pro</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 20px; line-height: 1.6; max-width: 1000px; margin: auto; background-color: #f4f4f9; }
+        .container { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); display: flex; flex-direction: column; gap: 15px; }
+        h2 { color: #333; text-align: center; margin-bottom: 20px; }
+        input[type="text"], input[type="number"], select, textarea { padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px; }
+        textarea { height: 400px; font-family: 'Consolas', monospace; background-color: #fafafa; }
+        label { font-weight: bold; margin-bottom: 5px; display: block; }
+        .row { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+        button { padding: 12px; font-size: 16px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; transition: background 0.3s; }
+        button:hover { background-color: #0056b3; }
+        .checkbox-label { display: flex; align-items: center; gap: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <h2>Công cụ tạo link hàng loạt v2.1</h2>
+    
+    <div class="container">
+        <div>
+            <label>Dán link mẫu:</label>
+            <input type="text" id="inputLink" style="width: 100%; box-sizing: border-box;" placeholder="Ví dụ: .../Season1/Ep1/index.m3u8">
+        </div>
+
+        <div class="row">
+            <div>
+                <label>Season (Mùa):</label>
+                <input type="number" id="seasonNum" value="1" min="1" style="width: 70px;">
+            </div>
+            <div>
+                <label>Từ tập:</label>
+                <input type="number" id="startEp" value="1" min="1" style="width: 70px;">
+            </div>
+            <div>
+                <label>Đến tập:</label>
+                <input type="number" id="endEp" value="10" min="1" style="width: 70px;">
+            </div>
+            
+            <div>
+                <label>Loại bản dịch:</label>
+                <select id="subType">
+                    <option value="TM">Thuyết minh (TM)</option>
+                    <option value="VS">Việt Sub (VS)</option>
+                    <option value="LT">Lồng tiếng (LT)</option>
+                    <option value="">Không kèm hậu tố</option>
+                </select>
+            </div>
+
+            <div style="margin-top: 25px;">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="isSV2"> Sử dụng Server 2 (_sv2)
+                </label>
+            </div>
+        </div>
+
+        <button onclick="generate()">Tạo danh sách link ngay</button>
+
+        <div>
+            <label>Kết quả (Định dạng: S01E01...|Link):</label>
+            <textarea id="result" readonly placeholder="Kết quả sẽ xuất hiện ở đây..."></textarea>
+        </div>
+    </div>
+
+    <script>
+        function generate() {
+            const rawLink = document.getElementById('inputLink').value.trim();
+            const season = parseInt(document.getElementById('seasonNum').value);
+            const start = parseInt(document.getElementById('startEp').value);
+            const end = parseInt(document.getElementById('endEp').value);
+            const subType = document.getElementById('subType').value;
+            const isSV2 = document.getElementById('isSV2').checked;
+            const resultBox = document.getElementById('result');
+
+            if (!rawLink) {
+                alert("Vui lòng nhập link mẫu!");
+                return;
+            }
+
+            if (isNaN(season) || season < 1) {
+                alert("Vui lòng nhập số Season hợp lệ!");
+                return;
+            }
+
+            let results = [];
+
+            // Định dạng số Season thành 2 chữ số (ví dụ: 1 -> 01, 2 -> 02)
+            let ssFormatted = season.toString().padStart(2, '0');
+
+            for (let i = start; i <= end; i++) {
+                // 1. Xử lý Link
+                // Thay thế Ep[số] trong link mẫu
+                let newLink = rawLink.replace(/(Ep)(\d+)/gi, `$1${i}`);
+                
+                // Nếu chọn SV2, đổi index.m3u8 thành index_sv2.m3u8
+                if (isSV2) {
+                    newLink = newLink.replace('index.m3u8', 'index_sv2.m3u8');
+                }
+
+                // 2. Xử lý Label (Số tập hiển thị đầu dòng)
+                // Định dạng số tập thành 2 chữ số (ví dụ: 1 -> 01)
+                let epFormatted = i.toString().padStart(2, '0');
+                let label = `S${ssFormatted}E${epFormatted}${subType}`;
+
+                results.push(`${label}|${newLink}`);
+            }
+
+            resultBox.value = results.join('\n');
+        }
+    </script>
+
+</body>
+</html>
